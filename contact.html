@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Contact — Jeyko.dev | Développeur Web & Créateur d'Expériences Digitales
+    </title>
+    <meta
+      name="description"
+      content="Discutons de votre projet. Contactez-moi pour créer ensemble une expérience digitale exceptionnelle."
+    />
+    <meta name="theme-color" content="#0b0d12" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — Jeyko.dev" />
+    <meta
+      property="og:description"
+      content="Parlons de votre projet digital. Développeur Web disponible pour des collaborations créatives."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jeyko.dev/contact.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/og-contact.jpg" />
+    <meta name="author" content="Jean Volcy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jeyko.dev/contact.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact — Jeyko.dev" />
+    <meta name="twitter:description" content="Parlons de votre projet digital. Développeur Web disponible pour des collaborations créatives." />
+    <meta name="twitter:image" content="https://jeyko.dev/assets/images/og-contact.jpg" />
+
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icons/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icons/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/icons/android-chrome-512x512.png"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/effects.css" />
+    <link rel="stylesheet" href="css/pages/contact.css" />
+    <link rel="stylesheet" href="css/components/world-map.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+
+  <body class="contact-page">
+    <!-- Loading screen -->
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+
+    <!-- Cursor effects -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Particles background -->
+    <div class="particles-container"></div>
+
+    <header class="site-header scrolled">
+      <div class="header-inner">
+        <a href="index.html" class="logo" data-cursor="hover">
+          <div class="logo-wrapper">
+            <img
+              src="assets/images/jeyko-logo1.png"
+              alt="Jeyko.dev"
+              class="logo-image"
+            />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+
+        <!-- BADGE CENTRÉ -->
+        <div class="hero-badge-wrapper">
+          <div class="badge-trail"></div>
+          <div class="hero-badge">PORTFOLIO</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+          <div class="nav-indicator"></div>
+          <a href="index.html" class="nav-link"
+            ><span class="nav-text">Accueil</span><span class="nav-dot"></span
+          ></a>
+          <a href="projects.html" class="nav-link"
+            ><span class="nav-text">Projets</span><span class="nav-dot"></span
+          ></a>
+          <a href="about.html" class="nav-link"
+            ><span class="nav-text">À propos</span><span class="nav-dot"></span
+          ></a>
+          <a href="contact.html" class="nav-link active cta"
+            ><span class="nav-text">Contact</span
+            ><span class="cta-sparkle">✧</span></a
+          >
+        </nav>
+
+        <button class="nav-toggle">
+          <span class="burger-line top"></span>
+          <span class="burger-line bottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="contact-main">
+
+      <!-- HERO -->
+      <section class="contact-hero reveal">
+        <div class="hero-background">
+          <div class="hero-glow"></div>
+          <div class="hero-grid"></div>
+          <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="contact-hero-content">
+            <div class="hero-eyebrow">
+              <span class="eyebrow-text">Contact</span>
+              <div class="eyebrow-line"></div>
+            </div>
+
+            <h1 class="hero-title glitch-text" data-text="Parlons de votre projet">
+              <span class="title-line">Parlons de</span>
+              <span class="title-line highlight">
+                <span class="highlight-text">votre projet</span>
+                <span class="highlight-underline"></span>
+              </span>
+            </h1>
+
+            <p class="hero-description">
+              <span class="description-line">Prêt à créer quelque chose d'exceptionnel ?</span>
+              <span class="description-line">Discutons de votre vision et construisons-la ensemble.</span>
+            </p>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-number" data-count="24">0</div>
+                <div class="stat-label">Heures de réponse</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">% de satisfaction</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="13">0</div>
+                <div class="stat-label">Projets accompagnés</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span class="scroll-text">En savoir plus</span>
+        </div>
+      </section>
+
+      <!-- CONTACT CONTENT -->
+      <div class="contact-sections reveal">
+        <div class="container">
+          <div class="contact-grid">
+
+            <!-- COLONNE GAUCHE : FORMULAIRE -->
+            <section class="contact-form-section">
+              <div class="section-header">
+                <div class="section-label">
+                  <i class="fas fa-paper-plane"></i>
+                  <span class="label-text">Envoyez un message</span>
+                </div>
+                <h2 class="section-title">
+                  <span class="title-part">Commençons</span>
+                  <span class="title-part highlight">la conversation</span>
+                </h2>
+                <p class="section-subtitle">
+                  Remplissez le formulaire ci-dessous et je vous répondrai dans les 24 heures.
+                </p>
+              </div>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-grid">
+
+                  <div class="form-group">
+                    <div class="input-wrapper">
+                      <input type="text" id="name" name="name" class="form-input" required autocomplete="name" />
+                      <label for="name" class="form-label">
+                        <span class="label-text">Votre nom</span>
+                        <span class="required">*</span>
+                      </label>
+                      <div class="input-line"></div>
+                      <div class="input-focus"></div>
+                    </div>
+                    <div class="error-message" id="name-error"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-wrapper">
+                      <input type="email" id="email" name="email" class="form-input" required autocomplete="email" />
+                      <label for="email" class="form-label">
+                        <span class="label-text">Votre email</span>
+                        <span class="required">*</span>
+                      </label>
+                      <div class="input-line"></div>
+                      <div class="input-focus"></div>
+                    </div>
+                    <div class="error-message" id="email-error"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-wrapper">
+                      <input type="text" id="subject" name="subject" class="form-input" required />
+                      <label for="subject" class="form-label">
+                        <span class="label-text">Sujet</span>
+                        <span class="required">*</span>
+                      </label>
+                      <div class="input-line"></div>
+                      <div class="input-focus"></div>
+                    </div>
+                    <div class="error-message" id="subject-error"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-wrapper">
+                      <select id="project-type" name="project-type" class="form-input">
+                        <option value="" selected disabled></option>
+                        <option value="website">Site Web</option>
+                        <option value="webapp">Application Web</option>
+                        <option value="mobile">Application Mobile</option>
+                        <option value="redesign">Redesign</option>
+                        <option value="consulting">Consultation</option>
+                        <option value="other">Autre</option>
+                      </select>
+                      <label for="project-type" class="form-label">
+                        <span class="label-text">Type de projet</span>
+                      </label>
+                      <div class="input-line"></div>
+                      <div class="input-focus"></div>
+                      <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <div class="input-wrapper">
+                      <textarea id="message" name="message" class="form-input" rows="6" required></textarea>
+                      <label for="message" class="form-label">
+                        <span class="label-text">Votre message</span>
+                        <span class="required">*</span>
+                      </label>
+                      <div class="input-line"></div>
+                      <div class="input-focus"></div>
+                      <div class="textarea-counter"><span id="char-count">0</span>/1000</div>
+                    </div>
+                    <div class="error-message" id="message-error"></div>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <div class="file-upload">
+                      <input type="file" id="attachment" name="attachment" class="file-input" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" />
+                      <label for="attachment" class="file-label">
+                        <i class="fas fa-paperclip"></i>
+                        <span class="file-text">Ajouter un fichier (optionnel)</span>
+                        <span class="file-info">PDF, DOC, JPG, PNG – Max 10 Mo</span>
+                      </label>
+                      <div class="file-preview" id="file-preview"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <div class="checkbox-group">
+                      <input type="checkbox" id="privacy" name="privacy" required />
+                      <label for="privacy" class="checkbox-label">
+                        <span class="checkbox-custom"><i class="fas fa-check"></i></span>
+                        <span class="checkbox-text">
+                          J'accepte la <a href="privacy.html" class="privacy-link">politique de confidentialité</a> et les conditions d'utilisation
+                        </span>
+                      </label>
+                    </div>
+                    <div class="error-message" id="privacy-error"></div>
+                  </div>
+
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn primary submit-btn" data-cursor="hover" disabled>
+                    <span class="btn-text">Envoyer le message</span>
+                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                    <div class="btn-glow"></div>
+                    <div class="btn-loading">
+                      <div class="loading-dots"><span></span><span></span><span></span></div>
+                    </div>
+                  </button>
+
+                  <div class="form-success" id="success-message">
+                    <div class="success-content">
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <h3>Message envoyé avec succès !</h3>
+                        <p>Je vous répondrai dans les plus brefs délais.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+
+            <!-- COLONNE DROITE : SIDEBAR -->
+            <aside class="contact-sidebar">
+
+              <!-- Moyens de contact -->
+              <div class="info-card">
+                <div class="card-header">
+                  <div class="section-label">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="label-text">Informations</span>
+                  </div>
+                  <h2 class="section-title">
+                    <span class="title-part">Comment</span>
+                    <span class="title-part highlight">me joindre</span>
+                  </h2>
+                  <p class="section-subtitle">Plusieurs moyens pour discuter de votre projet.</p>
+                </div>
+
+                <div class="contact-methods">
+                  <a href="mailto:contact.jeyko.dev@gmail.com" class="contact-method" data-cursor="hover">
+                    <div class="method-icon">
+                      <i class="fas fa-envelope"></i>
+                      <div class="icon-glow"></div>
+                    </div>
+                    <div class="method-content">
+                      <h3>Email</h3>
+                      <p class="method-value">contact.jeyko.dev@gmail.com</p>
+                      <span class="method-action">Envoyer un email →</span>
+                    </div>
+                    <div class="method-hover"></div>
+                  </a>
+
+                  <div class="contact-method" data-cursor="hover">
+                    <div class="method-icon">
+                      <i class="fas fa-phone"></i>
+                      <div class="icon-glow"></div>
+                    </div>
+                    <div class="method-content">
+                      <h3>Téléphone</h3>
+                      <p class="method-value">Disponible sur demande</p>
+                      <span class="method-action">Appel sur rendez-vous</span>
+                    </div>
+                    <div class="method-hover"></div>
+                  </div>
+
+                  <div class="contact-method" data-cursor="hover">
+                    <div class="method-icon">
+                      <i class="fas fa-calendar-alt"></i>
+                      <div class="icon-glow"></div>
+                    </div>
+                    <div class="method-content">
+                      <h3>Consultation gratuite</h3>
+                      <p class="method-value">30 min • Visio ou téléphone</p>
+                      <a href="https://calendly.com/jeyko" target="_blank" rel="noopener" class="method-action">
+                        Prendre rendez-vous ↗
+                      </a>
+                    </div>
+                    <div class="method-hover"></div>
+                  </div>
+                </div>
+
+                <div class="working-hours">
+                  <h3 class="hours-title">
+                    <i class="fas fa-clock"></i>
+                    <span>Disponibilités</span>
+                  </h3>
+                  <div class="hours-grid">
+                    <div class="hour-day">Lundi – Vendredi</div>
+                    <div class="hour-time">9:00 – 18:00</div>
+                    <div class="hour-day">Samedi</div>
+                    <div class="hour-time">10:00 – 14:00</div>
+                    <div class="hour-day">Dimanche</div>
+                    <div class="hour-time">Fermé</div>
+                  </div>
+                  <div class="timezone">
+                    <i class="fas fa-globe-europe"></i>
+                    <span>Europe/Paris (UTC+1) — Remote mondial</span>
+                  </div>
+                </div>
+
+                <div class="social-links">
+                  <h3 class="social-title">Réseaux sociaux</h3>
+                  <div class="social-grid">
+                    <a href="https://github.com/jeyko" class="social-link" target="_blank" rel="noopener" data-cursor="hover">
+                      <div class="social-icon"><i class="fab fa-github"></i></div>
+                      <span class="social-name">GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/jeyko" class="social-link" target="_blank" rel="noopener" data-cursor="hover">
+                      <div class="social-icon"><i class="fab fa-linkedin-in"></i></div>
+                      <span class="social-name">LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/jeyko" class="social-link" target="_blank" rel="noopener" data-cursor="hover">
+                      <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                      <span class="social-name">Twitter</span>
+                    </a>
+                    <a href="https://dribbble.com/jeyko" class="social-link" target="_blank" rel="noopener" data-cursor="hover">
+                      <div class="social-icon"><i class="fab fa-dribbble"></i></div>
+                      <span class="social-name">Dribbble</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </aside>
+          </div>
+
+          <!-- LIGNE DU BAS : CARTE + FAQ côte à côte -->
+          <div class="contact-bottom-row">
+
+            <!-- Carte monde Leaflet -->
+            <div class="world-card" id="world-card">
+              <div class="world-head">
+                <span class="world-pill">🌍 Worldwide</span>
+                <span class="world-sub">Disponible partout • Remote & On-site</span>
+              </div>
+              <div class="world-map-wrap">
+                <div id="worldMap" class="world-map" aria-label="Carte interactive du monde"></div>
+                <div class="world-map-glow" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-card">
+              <h3 class="faq-title">
+                <i class="fas fa-question-circle"></i>
+                <span>Questions fréquentes</span>
+              </h3>
+              <div class="faq-list">
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Quel est le délai de réponse ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Je réponds à tous les messages dans les 24 heures ouvrées. Pour les urgences, indiquez "URGENT" dans l'objet.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Quels types de projets acceptez-vous ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Sites web, applications, redesigns, intégrations API… Je privilégie les projets innovants avec une vraie valeur ajoutée.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Proposez-vous des consultations gratuites ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Oui — 30 minutes offertes pour cadrer votre projet, comprendre vos besoins et définir ensemble les prochaines étapes.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">
+                    <span>Travaillez-vous en remote ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Oui, 100% remote. J'interviens pour des clients partout en France et à l'international. Des déplacements ponctuels sont possibles.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <!-- Leaflet JS (DOIT être chargé en premier) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- World Map Script -->
+    <script src="js/components/world-map.js"></script>
+    <!-- Scripts existants -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

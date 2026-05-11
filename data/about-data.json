@@ -1,0 +1,140 @@
+{
+  "personalInfo": {
+    "name": "Jeyko",
+    "title": "Développeur Web & Web Mobile",
+    "location": "Travail à distance",
+    "availability": "Disponible pour de nouveaux projets",
+    "email": "contact@jeyko.dev",
+    "website": "https://jeyko.dev",
+    "yearsExperience": 3,
+    "projectsCompleted": 15,
+    "satisfactionRate": 100
+  },
+  
+  "philosophy": {
+    "title": "L'art du code et l'humain au centre",
+    "description": "Je ne code pas juste des interfaces. Je conçois des expériences pensées pour l'humain, avec une attention particulière portée à l'UX, aux performances et à la pérennité.",
+    "principles": [
+      {
+        "icon": "heart",
+        "title": "Passion du détail",
+        "description": "Chaque pixel, chaque ligne de code compte. Je m'attache à créer des interfaces qui fonctionnent parfaitement et procurent une expérience mémorable."
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation continue",
+        "description": "Je reste à la pointe des technologies et des tendances pour proposer des solutions modernes, performantes et adaptées aux besoins actuels."
+      },
+      {
+        "icon": "handshake",
+        "title": "Collaboration transparente",
+        "description": "Chaque projet est une aventure partagée. J'accorde une grande importance à la communication et à la transparence tout au long du processus."
+      }
+    ],
+    "quote": {
+      "text": "Le code n'est pas une fin en soi, mais un moyen de créer des expériences qui facilitent la vie des utilisateurs et transcendent leurs attentes.",
+      "author": "Jeyko",
+      "title": "Développeur Web & Web Mobile"
+    }
+  },
+  
+  "journey": [
+    {
+      "year": "2021",
+      "title": "Débuts en développement",
+      "description": "Premiers pas dans le développement web avec HTML, CSS et JavaScript. Création de sites vitrines et initiation aux frameworks modernes.",
+      "tags": ["HTML/CSS", "JavaScript", "Responsive Design"],
+      "milestones": ["Premier site web", "Apprentissage des bases", "Découverte du responsive design"]
+    },
+    {
+      "year": "2022",
+      "title": "Spécialisation Frontend",
+      "description": "Approfondissement des technologies frontend : React, Vue.js, animations CSS avancées et expérience utilisateur. Premiers projets freelance.",
+      "tags": ["React", "Vue.js", "UI/UX Design"],
+      "milestones": ["Premier projet React", "Formation UI/UX", "Premiers clients freelance"]
+    },
+    {
+      "year": "2023",
+      "title": "Développement Full Stack",
+      "description": "Expansion vers le backend avec Node.js, Express et bases de données. Développement d'applications complètes et gestion de projets plus complexes.",
+      "tags": ["Node.js", "MongoDB", "API REST"],
+      "milestones": ["Première API REST", "Application complète", "Gestion de projet Agile"]
+    },
+    {
+      "year": "2024",
+      "title": "Expertise & Innovation",
+      "description": "Focus sur les performances, l'accessibilité et les technologies émergentes. Création d'expériences web immersives et contribution à des projets open source.",
+      "tags": ["Performance", "WebGL", "Accessibilité"],
+      "milestones": ["Optimisation avancée", "Expériences 3D", "Contributions open source"]
+    }
+  ],
+  
+  "expertise": [
+    {
+      "id": 1,
+      "icon": "paint-brush",
+      "title": "Interfaces Immersives",
+      "description": "Design moderne, animations subtiles, expérience fluide qui captive l'attention et guide naturellement l'utilisateur.",
+      "skills": ["UI/UX Design", "Animations CSS", "Prototypage", "Design Systems"],
+      "level": 95
+    },
+    {
+      "id": 2,
+      "icon": "rocket",
+      "title": "Applications Performantes",
+      "description": "Code propre, optimisé et maintenable. Applications rapides, évolutives et conçues pour durer dans le temps.",
+      "skills": ["Optimisation", "Architecture", "Tests", "Performance"],
+      "level": 90
+    },
+    {
+      "id": 3,
+      "icon": "eye",
+      "title": "Vision Long Terme",
+      "description": "Des projets pensés pour évoluer. Solutions robustes, documentation complète et évolutivité garantie.",
+      "skills": ["Évolutivité", "Documentation", "Maintenance", "Best Practices"],
+      "level": 85
+    }
+  ],
+  
+  "technologies": {
+    "frontend": [
+      { "name": "HTML5", "icon": "fab fa-html5", "level": 95 },
+      { "name": "CSS3", "icon": "fab fa-css3-alt", "level": 95 },
+      { "name": "JavaScript", "icon": "fab fa-js", "level": 90 },
+      { "name": "React", "icon": "fab fa-react", "level": 85 },
+      { "name": "Vue.js", "icon": "fab fa-vuejs", "level": 80 },
+      { "name": "TypeScript", "icon": "fas fa-code", "level": 75 }
+    ],
+    "backend": [
+      { "name": "Node.js", "icon": "fab fa-node-js", "level": 80 },
+      { "name": "Express", "icon": "fas fa-bolt", "level": 75 },
+      { "name": "MongoDB", "icon": "fas fa-database", "level": 70 },
+      { "name": "PostgreSQL", "icon": "fas fa-database", "level": 65 },
+      { "name": "REST API", "icon": "fas fa-network-wired", "level": 85 },
+      { "name": "GraphQL", "icon": "fas fa-project-diagram", "level": 70 }
+    ],
+    "tools": [
+      { "name": "Git", "icon": "fab fa-git-alt", "level": 90 },
+      { "name": "Webpack", "icon": "fas fa-cube", "level": 75 },
+      { "name": "Figma", "icon": "fab fa-figma", "level": 85 },
+      { "name": "Adobe XD", "icon": "fas fa-pen-nib", "level": 80 },
+      { "name": "Jest", "icon": "fas fa-vial", "level": 70 },
+      { "name": "Docker", "icon": "fab fa-docker", "level": 65 }
+    ]
+  },
+  
+  "skills": [
+    { "name": "Développement Frontend", "level": 95 },
+    { "name": "UI/UX Design", "level": 85 },
+    { "name": "Développement Backend", "level": 80 },
+    { "name": "Optimisation SEO", "level": 90 },
+    { "name": "Accessibilité Web", "level": 85 },
+    { "name": "Performance Web", "level": 90 }
+  ],
+  
+  "socialLinks": [
+    { "platform": "GitHub", "url": "https://github.com/jeyko", "icon": "fab fa-github" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com/in/jeyko", "icon": "fab fa-linkedin" },
+    { "platform": "Twitter", "url": "https://twitter.com/jeyko", "icon": "fab fa-twitter" }
+  ]
+}

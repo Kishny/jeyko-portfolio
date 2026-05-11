@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country App — Jeyko.dev</title>
+    <meta name="description" content="Application éducative sur les pays du monde : drapeaux, capitales, populations et statistiques. Développée en JavaScript avec design responsive." />
+    <meta name="theme-color" content="#0b0d12" />
+    <meta property="og:title" content="Country App — Jeyko.dev" />
+    <meta property="og:description" content="Application éducative sur les pays du monde avec drapeaux, capitales et populations." />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/effects.css" />
+    <link rel="stylesheet" href="../css/pages/project-detail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jeyko.dev/projects/fintech.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/og-image.jpg" />
+    <meta name="author" content="Jean Volcy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jeyko.dev/projects/fintech.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Country App — Jeyko.dev" />
+    <meta name="twitter:description" content="Application éducative sur les pays du monde avec drapeaux, capitales et populations." />
+    <meta name="twitter:image" content="https://jeyko.dev/assets/images/og-image.jpg" />
+  </head>
+  <body class="project-detail-page">
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="particles-container"></div>
+
+    <header class="site-header scrolled">
+      <div class="header-inner">
+        <a href="../index.html" class="logo" data-cursor="hover">
+          <div class="logo-wrapper">
+            <img src="../assets/images/jeyko-logo1.png" alt="Jeyko.dev" class="logo-image" />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+        <div class="hero-badge-wrapper">
+          <div class="badge-trail"></div>
+          <div class="hero-badge">PORTFOLIO</div>
+        </div>
+        <nav class="main-nav">
+          <div class="nav-indicator"></div>
+          <a href="../index.html" class="nav-link"><span class="nav-text">Accueil</span><span class="nav-dot"></span></a>
+          <a href="../projects.html" class="nav-link active"><span class="nav-text">Projets</span><span class="nav-dot"></span></a>
+          <a href="../about.html" class="nav-link"><span class="nav-text">À propos</span><span class="nav-dot"></span></a>
+          <a href="../contact.html" class="nav-link cta"><span class="nav-text">Contact</span><span class="cta-sparkle">✧</span></a>
+        </nav>
+        <button class="nav-toggle">
+          <span class="burger-line top"></span>
+          <span class="burger-line bottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="project-detail-hero">
+        <div class="hero-background">
+          <div class="hero-glow"></div>
+          <div class="hero-grid"></div>
+        </div>
+        <div class="container">
+          <a href="../projects.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour aux projets
+          </a>
+          <div class="hero-eyebrow">
+            <span class="project-badge-hero">Design</span>
+            <span class="project-year-hero">2022</span>
+          </div>
+          <h1 class="hero-title">Country <span class="highlight">App</span></h1>
+          <div class="hero-tags">
+            <span class="hero-tag">JavaScript</span>
+            <span class="hero-tag">REST API</span>
+            <span class="hero-tag">UI/UX</span>
+            <span class="hero-tag">Responsive</span>
+          </div>
+          <div class="hero-actions">
+            <a href="https://demo.fintech.com" target="_blank" rel="noopener" class="btn primary">
+              <i class="fas fa-external-link-alt"></i> Voir la démo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- OVERVIEW -->
+        <div class="project-overview reveal">
+          <div class="overview-item">
+            <div class="overview-label">Type</div>
+            <div class="overview-value">Projet éducatif</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Durée</div>
+            <div class="overview-value">3 mois</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Année</div>
+            <div class="overview-value">2022</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Stack</div>
+            <div class="overview-value">JavaScript, REST Countries API</div>
+          </div>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="project-showcase reveal">
+          <img src="../assets/images/projects/apercu-country.png" alt="Aperçu Country App" loading="lazy" />
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="project-sections">
+          <!-- Description -->
+          <section class="reveal">
+            <div class="section-label">À propos du projet</div>
+            <h2 class="section-title">Explorer le monde en un clic</h2>
+            <p class="section-text">
+              Country App est une application éducative permettant d'explorer les pays du monde de manière intuitive. Elle consomme l'API REST Countries pour afficher en temps réel les drapeaux, capitales, populations, langues, monnaies et codes téléphoniques de chaque pays.
+            </p>
+            <p class="section-text" style="margin-top:1rem;">
+              Le projet propose une recherche instantanée, un filtrage par continent et une fiche détaillée par pays avec les pays frontaliers liés. Le design responsive garantit une expérience optimale sur mobile et desktop.
+            </p>
+          </section>
+
+          <!-- Features -->
+          <section class="reveal">
+            <div class="section-label">Fonctionnalités</div>
+            <h2 class="section-title">Ce que propose l'application</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-flag"></i></div>
+                <div class="feature-name">Drapeaux du monde</div>
+                <div class="feature-desc">Affichage de 250+ drapeaux avec informations clés en un coup d'œil.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-search"></i></div>
+                <div class="feature-name">Recherche instantanée</div>
+                <div class="feature-desc">Filtrage en temps réel par nom de pays sans rechargement de page.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-globe-africa"></i></div>
+                <div class="feature-name">Filtre par continent</div>
+                <div class="feature-desc">Navigation par région géographique (Afrique, Asie, Europe…).</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="feature-name">Fiche détaillée</div>
+                <div class="feature-desc">Page dédiée avec capitale, monnaie, langues, et pays frontaliers cliquables.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Challenge / Solution -->
+          <section class="reveal">
+            <div class="section-label">Défi & Solution</div>
+            <h2 class="section-title">Résoudre les vrais problèmes</h2>
+            <div class="process-grid">
+              <div class="process-card challenge">
+                <div class="process-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <h3 class="process-title">Le défi</h3>
+                <p class="process-text">Afficher et filtrer efficacement plus de 250 pays avec une recherche fluide, tout en maintenant une bonne lisibilité sur mobile sans surcharger l'interface.</p>
+              </div>
+              <div class="process-card solution">
+                <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="process-title">La solution</h3>
+                <p class="process-text">Mise en cache des données API au premier chargement, filtrage JS pur côté client pour la réactivité maximale, et grille CSS adaptative qui se reconfigure automatiquement selon la taille d'écran.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Stack -->
+          <section class="reveal">
+            <div class="section-label">Technologies</div>
+            <h2 class="section-title">Stack utilisée</h2>
+            <div class="stack-tags">
+              <span class="stack-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="stack-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="stack-tag"><i class="fab fa-js"></i> JavaScript ES6+</span>
+              <span class="stack-tag"><i class="fas fa-plug"></i> REST Countries API</span>
+              <span class="stack-tag"><i class="fas fa-mobile-alt"></i> Mobile First</span>
+            </div>
+          </section>
+        </div>
+
+        <!-- LINKS -->
+        <div class="project-links-section reveal">
+          <div class="links-content">
+            <div class="links-text">
+              <h3>Voir le projet en action</h3>
+              <p>Démo live disponible.</p>
+            </div>
+            <div class="links-actions">
+              <a href="https://demo.fintech.com" target="_blank" rel="noopener" class="btn primary">
+                <i class="fas fa-external-link-alt"></i> Démo live
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="project-nav reveal" aria-label="Navigation entre projets">
+          <a href="mindful.html" class="project-nav-link prev">
+            <div class="nav-link-icon"><i class="fas fa-arrow-left"></i></div>
+            <div>
+              <div class="nav-link-label">Projet précédent</div>
+              <div class="nav-link-title">Mode & Motion</div>
+            </div>
+          </a>
+          <a href="ecotrack.html" class="project-nav-link next">
+            <div>
+              <div class="nav-link-label">Projet suivant</div>
+              <div class="nav-link-title">EcoTrack</div>
+            </div>
+            <div class="nav-link-icon"><i class="fas fa-arrow-right"></i></div>
+          </a>
+        </nav>
+      </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/hover.js"></script>
+    <script src="../js/effects.js"></script>
+    <script>document.documentElement.classList.remove("no-js");</script>
+  </body>
+</html>

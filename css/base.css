@@ -1,0 +1,23 @@
+/* Base CSS */
+:root {
+  --header-height: 96px;
+  --header-padding-x: 5vw;
+  --logo-size: 64px;
+  --logo-size-scrolled: 56px;
+}
+
+body {
+  background: radial-gradient(circle at top, #141726, #0b0d12 60%);
+  color: var(--text-main);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+main {
+  padding-top: var(--header-height);
+}
+
+.about-hero,
+.projects-hero,
+.contact-hero {
+  padding: 6rem 0 4rem;
+}

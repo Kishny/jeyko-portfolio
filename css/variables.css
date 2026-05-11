@@ -1,0 +1,102 @@
+:root {
+  /* Couleurs principales */
+  --bg-primary: #0b0d12;
+  --bg-secondary: #141726;
+  --bg-card: rgba(20, 23, 38, 0.6);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+
+  /* Couleurs d'accent */
+  --accent: #8e7ab5;
+  --accent-light: #a396c7;
+  --accent-dark: #725e9d;
+  --accent-gradient: linear-gradient(135deg, #8e7ab5, #00e0ff);
+
+  /* Couleurs secondaires */
+  --secondary: #00e0ff;
+  --secondary-light: #4deaff;
+  --secondary-dark: #00b8d4;
+
+  /* Texte */
+  --text-main: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --text-light: rgba(255, 255, 255, 0.5);
+
+  /* Bordures */
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  /* Ombres et effets */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 40px 80px rgba(0, 0, 0, 0.4);
+
+  --glow: 0 0 40px rgba(142, 122, 181, 0.3);
+  --glow-strong: 0 0 60px rgba(142, 122, 181, 0.5);
+  --glow-secondary: 0 0 40px rgba(0, 224, 255, 0.3);
+
+  /* Rayons */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Blur effects */
+  --blur-sm: blur(8px);
+  --blur-md: blur(16px);
+  --blur-lg: blur(24px);
+
+  /* Typographie */
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-secondary: "Space Grotesk", "Inter", sans-serif;
+
+  /* Espacement */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-xxl: 8rem;
+
+  /* Z-index */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  --z-cursor: 700;
+  --z-loading: 800;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-card: rgba(30, 33, 48, 0.8);
+    --border-soft: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --text-main: #ffffff;
+    --text-muted: #cccccc;
+    --border-soft: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ease: cubic-bezier(0, 0, 1, 1);
+  }
+}

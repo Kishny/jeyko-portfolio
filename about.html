@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      À Propos — Jeyko.dev | Développeur Web & Créateur d'Expériences Digitales
+    </title>
+    <meta
+      name="description"
+      content="Développeur Web & Web Mobile passionné par la création d'expériences numériques modernes, intuitives et durables."
+    />
+    <meta name="theme-color" content="#0b0d12" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="À Propos — Jeyko.dev" />
+    <meta
+      property="og:description"
+      content="Découvrez mon parcours, ma philosophie de travail et mon expertise en développement web."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jeyko.dev/about.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/og-about.jpg" />
+    <meta name="author" content="Jean Volcy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jeyko.dev/about.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="À Propos — Jeyko.dev" />
+    <meta name="twitter:description" content="Découvrez mon parcours, ma philosophie de travail et mon expertise en développement web." />
+    <meta name="twitter:image" content="https://jeyko.dev/assets/images/og-about.jpg" />
+
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icons/favicon-16x16.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icons/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/icons/android-chrome-512x512.png"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/effects.css" />
+    <link rel="stylesheet" href="css/pages/about.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Preload -->
+    <link rel="preload" href="assets/images/jeyko-profile.png" as="image" />
+  </head>
+
+  <body class="about-page">
+    <!-- Loading screen -->
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+
+    <!-- Cursor effects -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Particles background -->
+    <div class="particles-container"></div>
+
+    <!-- HEADER -->
+    <header class="site-header scrolled">
+      <div class="header-inner">
+        <a href="index.html" class="logo" data-cursor="hover">
+          <div class="logo-wrapper">
+            <img
+              src="assets/images/jeyko-logo1.png"
+              alt="Jeyko.dev"
+              class="logo-image"
+            />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+
+        <!-- BADGE CENTRÉ -->
+        <div class="hero-badge-wrapper">
+          <div class="badge-trail"></div>
+          <div class="hero-badge">PORTFOLIO</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+          <div class="nav-indicator"></div>
+          <a href="index.html" class="nav-link"
+            ><span class="nav-text">Accueil</span><span class="nav-dot"></span
+          ></a>
+          <a href="projects.html" class="nav-link"
+            ><span class="nav-text">Projets</span><span class="nav-dot"></span
+          ></a>
+          <a href="about.html" class="nav-link active"
+            ><span class="nav-text">À propos</span><span class="nav-dot"></span
+          ></a>
+          <a href="contact.html" class="nav-link cta"
+            ><span class="nav-text">Contact</span
+            ><span class="cta-sparkle">✧</span></a
+          >
+        </nav>
+
+        <button class="nav-toggle">
+          <span class="burger-line top"></span>
+          <span class="burger-line bottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="about-main">
+      <!-- HERO SECTION -->
+      <section class="about-hero reveal">
+        <div class="hero-background">
+          <div class="hero-glow"></div>
+          <div class="hero-grid"></div>
+          <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="about-hero-grid">
+            <div class="about-hero-content">
+              <div class="hero-eyebrow">
+                <span class="eyebrow-text">À propos</span>
+                <div class="eyebrow-line"></div>
+              </div>
+
+              <h1
+                class="about-title glitch-text"
+                data-text="Je crée des expériences qui ont du sens"
+              >
+                <span class="title-line">Je crée des expériences</span>
+                <span class="title-line highlight">
+                  <span class="highlight-text">qui ont du sens</span>
+                  <span class="highlight-underline"></span>
+                </span>
+              </h1>
+
+              <p class="about-intro">
+                <span class="intro-line">Je suis Jean VOLCY</span>
+                <span class="intro-line"
+                  >Développeur Web & Web Mobile passionné,</span
+                >
+                <span class="intro-line"
+                  >je transforme des idées en produits digitaux</span
+                >
+                <span class="intro-line highlight-accent"
+                  >élégants, performants et durables.</span
+                >
+              </p>
+
+              <div class="hero-stats">
+                <div class="stat">
+                  <div class="stat-number" data-count="3">0</div>
+                  <div class="stat-label">Années d'expérience</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number" data-count="13">0</div>
+                  <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number" data-count="100">0</div>
+                  <div class="stat-label">% de satisfaction</div>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <a href="projects.html" class="btn primary" data-cursor="hover">
+                  <span class="btn-text">Voir mes projets</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+                <a href="contact.html" class="btn ghost" data-cursor="hover">
+                  <span class="btn-text">Me contacter</span>
+                  <span class="btn-sparkles">✨</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="about-hero-visual">
+              <div class="portrait-container">
+                <div class="portrait-wrapper">
+                  <img
+                    src="assets/images/jeyko-logo1.png"
+                    alt="Jeyko.dev - Développeur Web"
+                    class="about-portrait"
+                    loading="eager"
+                  />
+                  <div class="portrait-frame"></div>
+                  <div class="portrait-glow"></div>
+                </div>
+
+                <div class="portrait-orbits">
+                  <div class="orbit orbit-1"></div>
+                  <div class="orbit orbit-2"></div>
+                  <div class="orbit orbit-3"></div>
+                </div>
+
+                <div class="portrait-badges">
+                  <div class="badge">
+                    <i class="fas fa-code"></i>
+                    <span>Développeur Web</span>
+                  </div>
+                  <div class="badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Web Mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span class="scroll-text">Découvrir</span>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY SECTION -->
+      <section class="about-philosophy reveal">
+        <div class="container">
+          <div class="philosophy-header">
+            <div class="section-label">
+              <span class="label-text">Philosophie</span>
+              <div class="label-line"></div>
+            </div>
+
+            <h2 class="section-title">
+              <span class="title-part">L'art du code</span>
+              <span class="title-part highlight">et l'humain au centre</span>
+            </h2>
+
+            <p class="section-subtitle">
+              Je ne code pas juste des interfaces. Je conçois des expériences
+              pensées pour l'humain, avec une attention particulière portée à
+              l'UX, aux performances et à la pérennité.
+            </p>
+          </div>
+
+          <div class="philosophy-grid">
+            <div class="philosophy-card" data-cursor="hover">
+              <div class="card-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Passion du détail</h3>
+              <p>
+                Chaque pixel, chaque ligne de code compte. Je m'attache à créer
+                des interfaces qui fonctionnent parfaitement et procurent une
+                expérience mémorable.
+              </p>
+            </div>
+
+            <div class="philosophy-card" data-cursor="hover">
+              <div class="card-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Innovation continue</h3>
+              <p>
+                Je reste à la pointe des technologies et des tendances pour
+                proposer des solutions modernes, performantes et adaptées aux
+                besoins actuels.
+              </p>
+            </div>
+
+            <div class="philosophy-card" data-cursor="hover">
+              <div class="card-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3>Collaboration transparente</h3>
+              <p>
+                Chaque projet est une aventure partagée. J'accorde une grande
+                importance à la communication et à la transparence tout au long
+                du processus.
+              </p>
+            </div>
+          </div>
+
+          <div class="philosophy-quote">
+            <div class="quote-content">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                Le code n'est pas une fin en soi, mais un moyen de créer des
+                expériences qui facilitent la vie des utilisateurs et
+                transcendent leurs attentes.
+              </p>
+              <div class="quote-author">
+                <span class="author-name">Jeyko</span>
+                <span class="author-title">Développeur Web & Web Mobile</span>
+              </div>
+            </div>
+            <div class="quote-decoration"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JOURNEY SECTION -->
+      <section class="about-journey reveal">
+        <div class="container">
+          <div class="journey-header">
+            <div class="section-label">
+              <span class="label-text">Parcours</span>
+              <div class="label-line"></div>
+            </div>
+
+            <h2 class="section-title">
+              <span class="title-part">Mon évolution</span>
+              <span class="title-part highlight">dans le digital</span>
+            </h2>
+          </div>
+
+          <div class="journey-timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot">
+                <div class="dot-glow"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-year">2021</div>
+                <h3 class="timeline-title">Débuts en développement</h3>
+                <p class="timeline-description">
+                  Premiers pas dans le développement web avec HTML, CSS et
+                  JavaScript. Création de sites vitrines et initiation aux
+                  frameworks modernes.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">HTML/CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Responsive Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot">
+                <div class="dot-glow"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-year">2022</div>
+                <h3 class="timeline-title">Spécialisation Frontend</h3>
+                <p class="timeline-description">
+                  Approfondissement des technologies frontend : React, Vue.js,
+                  animations CSS avancées et expérience utilisateur. Premiers
+                  projets freelance.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">UI/UX Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot">
+                <div class="dot-glow"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-year">2023</div>
+                <h3 class="timeline-title">Développement Full Stack</h3>
+                <p class="timeline-description">
+                  Expansion vers le backend avec Node.js, Express et bases de
+                  données. Développement d'applications complètes et gestion de
+                  projets plus complexes.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">Node.js</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">API REST</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot">
+                <div class="dot-glow"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-year">2024</div>
+                <h3 class="timeline-title">Expertise & Innovation</h3>
+                <p class="timeline-description">
+                  Focus sur les performances, l'accessibilité et les
+                  technologies émergentes. Création d'expériences web immersives
+                  et contribution à des projets open source.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">Performance</span>
+                  <span class="tag">WebGL</span>
+                  <span class="tag">Accessibilité</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERTISE SECTION -->
+      <section class="about-expertise reveal">
+        <div class="container">
+          <div class="expertise-header">
+            <div class="section-label">
+              <span class="label-text">Expertise</span>
+              <div class="label-line"></div>
+            </div>
+
+            <h2 class="section-title">
+              <span class="title-part">Domaines de</span>
+              <span class="title-part highlight">spécialisation</span>
+            </h2>
+          </div>
+
+          <div class="expertise-grid">
+            <div class="expertise-card" data-cursor="hover">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="card-number">01</div>
+              </div>
+
+              <h3>Interfaces Immersives</h3>
+              <p>
+                Design moderne, animations subtiles, expérience fluide qui
+                captive l'attention et guide naturellement l'utilisateur.
+              </p>
+
+              <div class="card-skills">
+                <span class="skill">UI/UX Design</span>
+                <span class="skill">Animations CSS</span>
+                <span class="skill">Prototypage</span>
+              </div>
+            </div>
+
+            <div class="expertise-card" data-cursor="hover">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="card-number">02</div>
+              </div>
+
+              <h3>Applications Performantes</h3>
+              <p>
+                Code propre, optimisé et maintenable. Applications rapides,
+                évolutives et conçues pour durer dans le temps.
+              </p>
+
+              <div class="card-skills">
+                <span class="skill">Optimisation</span>
+                <span class="skill">Architecture</span>
+                <span class="skill">Tests</span>
+              </div>
+            </div>
+
+            <div class="expertise-card" data-cursor="hover">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="card-number">03</div>
+              </div>
+
+              <h3>Vision Long Terme</h3>
+              <p>
+                Des projets pensés pour évoluer. Solutions robustes,
+                documentation complète et évolutivité garantie.
+              </p>
+
+              <div class="card-skills">
+                <span class="skill">Évolutivité</span>
+                <span class="skill">Documentation</span>
+                <span class="skill">Maintenance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK SECTION -->
+      <section class="about-stack reveal">
+        <div class="container">
+          <div class="stack-header">
+            <div class="section-label">
+              <span class="label-text">Technologies</span>
+              <div class="label-line"></div>
+            </div>
+
+            <h2 class="section-title">
+              <span class="title-part">Stack &</span>
+              <span class="title-part highlight">Outils</span>
+            </h2>
+
+            <p class="section-subtitle">
+              Un écosystème de technologies modernes et éprouvées pour créer des
+              expériences digitales exceptionnelles.
+            </p>
+          </div>
+
+          <div class="stack-grid">
+            <div class="stack-category">
+              <h3 class="category-title">
+                <i class="fas fa-code"></i>
+                Frontend
+              </h3>
+              <div class="category-items">
+                <div class="stack-item" data-tooltip="HTML5">
+                  <i class="fab fa-html5"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="stack-item" data-tooltip="CSS3">
+                  <i class="fab fa-css3-alt"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="stack-item" data-tooltip="JavaScript">
+                  <i class="fab fa-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="stack-item" data-tooltip="React">
+                  <i class="fab fa-react"></i>
+                  <span>React</span>
+                </div>
+                <div class="stack-item" data-tooltip="Vue.js">
+                  <i class="fab fa-vuejs"></i>
+                  <span>Vue.js</span>
+                </div>
+                <div class="stack-item" data-tooltip="TypeScript">
+                  <i class="fas fa-code"></i>
+                  <span>TypeScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category">
+              <h3 class="category-title">
+                <i class="fas fa-server"></i>
+                Backend
+              </h3>
+              <div class="category-items">
+                <div class="stack-item" data-tooltip="Node.js">
+                  <i class="fab fa-node-js"></i>
+                  <span>Node.js</span>
+                </div>
+                <div class="stack-item" data-tooltip="Express">
+                  <i class="fas fa-bolt"></i>
+                  <span>Express</span>
+                </div>
+                <div class="stack-item" data-tooltip="MongoDB">
+                  <i class="fas fa-database"></i>
+                  <span>MongoDB</span>
+                </div>
+                <div class="stack-item" data-tooltip="PostgreSQL">
+                  <i class="fas fa-database"></i>
+                  <span>PostgreSQL</span>
+                </div>
+                <div class="stack-item" data-tooltip="REST API">
+                  <i class="fas fa-network-wired"></i>
+                  <span>REST API</span>
+                </div>
+                <div class="stack-item" data-tooltip="GraphQL">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>GraphQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category">
+              <h3 class="category-title">
+                <i class="fas fa-tools"></i>
+                Outils & Design
+              </h3>
+              <div class="category-items">
+                <div class="stack-item" data-tooltip="Git">
+                  <i class="fab fa-git-alt"></i>
+                  <span>Git</span>
+                </div>
+                <div class="stack-item" data-tooltip="Webpack">
+                  <i class="fas fa-cube"></i>
+                  <span>Webpack</span>
+                </div>
+                <div class="stack-item" data-tooltip="Figma">
+                  <i class="fab fa-figma"></i>
+                  <span>Figma</span>
+                </div>
+                <div class="stack-item" data-tooltip="Adobe XD">
+                  <i class="fas fa-pen-nib"></i>
+                  <span>Adobe XD</span>
+                </div>
+                <div class="stack-item" data-tooltip="Jest">
+                  <i class="fas fa-vial"></i>
+                  <span>Jest</span>
+                </div>
+                <div class="stack-item" data-tooltip="Docker">
+                  <i class="fab fa-docker"></i>
+                  <span>Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-progress">
+            <div class="progress-item">
+              <div class="progress-header">
+                <span class="progress-label">Développement Frontend</span>
+                <span class="progress-value">95%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="95"></div>
+              </div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-header">
+                <span class="progress-label">UI/UX Design</span>
+                <span class="progress-value">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-header">
+                <span class="progress-label">Développement Backend</span>
+                <span class="progress-value">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="80"></div>
+              </div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-header">
+                <span class="progress-label">Optimisation SEO</span>
+                <span class="progress-value">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLABORATION SECTION -->
+      <section class="about-cta reveal">
+        <div class="cta-background">
+          <div class="cta-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+
+        <div class="container">
+
+          <!-- En-tête -->
+          <div class="collab-header">
+            <div class="cta-label">
+              <span class="label-text">Collaboration</span>
+              <div class="label-line"></div>
+            </div>
+            <h2 class="cta-title">Travaillons ensemble</h2>
+            <p class="cta-description">
+              De l'idée au produit fini, je vous accompagne à chaque étape avec rigueur, transparence et passion — pour créer quelque chose dont vous serez fier(e).
+            </p>
+          </div>
+
+          <!-- Processus en 4 étapes -->
+          <div class="collab-process">
+            <div class="process-step" data-cursor="hover">
+              <div class="step-number">01</div>
+              <div class="step-icon"><i class="fas fa-comments"></i></div>
+              <h3>Échange initial</h3>
+              <p>Un appel gratuit de 30 min pour comprendre votre vision, vos besoins et définir ensemble le périmètre du projet.</p>
+            </div>
+            <div class="process-step" data-cursor="hover">
+              <div class="step-number">02</div>
+              <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+              <h3>Stratégie & Devis</h3>
+              <p>Une proposition détaillée sous 48h : plan technique, planning clair et budget transparent sans surprise.</p>
+            </div>
+            <div class="process-step" data-cursor="hover">
+              <div class="step-number">03</div>
+              <div class="step-icon"><i class="fas fa-code"></i></div>
+              <h3>Développement</h3>
+              <p>Livraisons itératives avec aperçus réguliers. Vous restez impliqué(e) et informé(e) à chaque avancée.</p>
+            </div>
+            <div class="process-step" data-cursor="hover">
+              <div class="step-number">04</div>
+              <div class="step-icon"><i class="fas fa-rocket"></i></div>
+              <h3>Livraison & Suivi</h3>
+              <p>Mise en ligne soignée, formation si besoin et support post-lancement pour garantir votre succès.</p>
+            </div>
+          </div>
+
+          <!-- Mes engagements -->
+          <div class="collab-commitments">
+            <div class="commitment-card" data-cursor="hover">
+              <div class="commitment-icon"><i class="fas fa-bolt"></i></div>
+              <h3>Réactivité</h3>
+              <p>Réponse garantie sous 24h. Pour les urgences, je suis joignable rapidement via plusieurs canaux.</p>
+            </div>
+            <div class="commitment-card" data-cursor="hover">
+              <div class="commitment-icon"><i class="fas fa-eye"></i></div>
+              <h3>Transparence totale</h3>
+              <p>Mises à jour régulières, accès à l'espace projet (Notion / Trello) et communication directe et honnête.</p>
+            </div>
+            <div class="commitment-card" data-cursor="hover">
+              <div class="commitment-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Qualité garantie</h3>
+              <p>Code propre, documenté et maintenable. Tout est testé sur desktop et mobile avant chaque livraison.</p>
+            </div>
+          </div>
+
+          <!-- CTA final -->
+          <div class="collab-final">
+            <div class="availability-badge">
+              <span class="dot-online"></span>
+              <span>Disponible pour de nouveaux projets</span>
+            </div>
+            <div class="cta-actions">
+              <button type="button" class="btn primary" onclick="window.location.href='contact.html'" data-cursor="hover">
+                <span class="btn-text">Démarrer un projet</span>
+                <span class="btn-sparkle">✦</span>
+                <div class="btn-glow"></div>
+              </button>
+              <a href="projects.html" class="btn ghost" data-cursor="hover">
+                <span class="btn-text">Voir mes projets</span>
+                <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+            <div class="cta-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>France & International · 100% Remote</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Consultation gratuite de 30 min offerte</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/about.js"></script>
+  </body>
+</html>

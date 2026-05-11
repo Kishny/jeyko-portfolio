@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Calculator — Jeyko.dev</title>
+    <meta name="description" content="Dashboard interactif de calcul et réservation avec visualisation de données en temps réel et reporting automatisé." />
+    <meta name="theme-color" content="#0b0d12" />
+    <meta property="og:title" content="Data Calculator — Jeyko.dev" />
+    <meta property="og:description" content="Dashboard interactif avec visualisation de données en temps réel." />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/effects.css" />
+    <link rel="stylesheet" href="../css/pages/project-detail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jeyko.dev/projects/datacalc.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/og-image.jpg" />
+    <meta name="author" content="Jean Volcy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jeyko.dev/projects/datacalc.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Data Calculator — Jeyko.dev" />
+    <meta name="twitter:description" content="Dashboard interactif avec visualisation de données en temps réel." />
+    <meta name="twitter:image" content="https://jeyko.dev/assets/images/og-image.jpg" />
+  </head>
+  <body class="project-detail-page">
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="particles-container"></div>
+
+    <header class="site-header scrolled">
+      <div class="header-inner">
+        <a href="../index.html" class="logo" data-cursor="hover">
+          <div class="logo-wrapper">
+            <img src="../assets/images/jeyko-logo1.png" alt="Jeyko.dev" class="logo-image" />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+        <div class="hero-badge-wrapper">
+          <div class="badge-trail"></div>
+          <div class="hero-badge">PORTFOLIO</div>
+        </div>
+        <nav class="main-nav">
+          <div class="nav-indicator"></div>
+          <a href="../index.html" class="nav-link"><span class="nav-text">Accueil</span><span class="nav-dot"></span></a>
+          <a href="../projects.html" class="nav-link active"><span class="nav-text">Projets</span><span class="nav-dot"></span></a>
+          <a href="../about.html" class="nav-link"><span class="nav-text">À propos</span><span class="nav-dot"></span></a>
+          <a href="../contact.html" class="nav-link cta"><span class="nav-text">Contact</span><span class="cta-sparkle">✧</span></a>
+        </nav>
+        <button class="nav-toggle">
+          <span class="burger-line top"></span>
+          <span class="burger-line bottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="project-detail-hero">
+        <div class="hero-background">
+          <div class="hero-glow"></div>
+          <div class="hero-grid"></div>
+        </div>
+        <div class="container">
+          <a href="../projects.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour aux projets
+          </a>
+          <div class="hero-eyebrow">
+            <span class="project-badge-hero">Popular</span>
+            <span class="project-year-hero">2023</span>
+          </div>
+          <h1 class="hero-title">Data <span class="highlight">Calculator</span></h1>
+          <div class="hero-tags">
+            <span class="hero-tag">Dashboard</span>
+            <span class="hero-tag">JavaScript</span>
+            <span class="hero-tag">DataViz</span>
+            <span class="hero-tag">API</span>
+            <span class="hero-tag">Vue.js</span>
+          </div>
+          <div class="hero-actions">
+            <a href="https://data-calculator-one.vercel.app/" target="_blank" rel="noopener" class="btn primary">
+              <i class="fas fa-external-link-alt"></i> Voir la démo
+            </a>
+            <a href="https://github.com/jeyko/datacalc" target="_blank" rel="noopener" class="btn ghost">
+              <i class="fab fa-github"></i> Code source
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- OVERVIEW -->
+        <div class="project-overview reveal">
+          <div class="overview-item">
+            <div class="overview-label">Client</div>
+            <div class="overview-value">Entreprise SaaS</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Durée</div>
+            <div class="overview-value">4 mois</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Année</div>
+            <div class="overview-value">2023</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Stack</div>
+            <div class="overview-value">Vue.js, D3.js, Express</div>
+          </div>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="project-showcase reveal">
+          <img src="../assets/images/projects/apercu-calculator.png" alt="Aperçu Data Calculator" loading="lazy" />
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="project-sections">
+          <!-- Description -->
+          <section class="reveal">
+            <div class="section-label">À propos du projet</div>
+            <h2 class="section-title">La puissance des données au bout des doigts</h2>
+            <p class="section-text">
+              Data Calculator est une application SaaS de calcul et de réservation destinée aux équipes analytiques. Elle centralise les données métier dans un dashboard interactif permettant de visualiser en temps réel l'évolution des indicateurs clés, de générer des rapports PDF automatisés et de collaborer à plusieurs utilisateurs simultanément.
+            </p>
+            <p class="section-text" style="margin-top:1rem;">
+              Le projet met l'accent sur la lisibilité des données complexes : les graphiques D3.js sont entièrement personnalisables et les calculs se mettent à jour instantanément grâce aux WebSockets.
+            </p>
+          </section>
+
+          <!-- Features -->
+          <section class="reveal">
+            <div class="section-label">Fonctionnalités</div>
+            <h2 class="section-title">Ce que propose l'application</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+                <div class="feature-name">Calculs temps réel</div>
+                <div class="feature-desc">Mise à jour instantanée des résultats via WebSockets sans rechargement.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="feature-name">Graphiques interactifs</div>
+                <div class="feature-desc">Visualisations D3.js personnalisables : courbes, histogrammes, treemaps.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="feature-name">Export PDF</div>
+                <div class="feature-desc">Génération de rapports PDF automatisés avec mise en page professionnelle.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <div class="feature-name">Multi-utilisateurs</div>
+                <div class="feature-desc">Gestion des rôles, partage de dashboards et historique d'activité.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Challenge / Solution -->
+          <section class="reveal">
+            <div class="section-label">Défi & Solution</div>
+            <h2 class="section-title">Résoudre les vrais problèmes</h2>
+            <div class="process-grid">
+              <div class="process-card challenge">
+                <div class="process-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <h3 class="process-title">Le défi</h3>
+                <p class="process-text">Gérer des calculs complexes en temps réel avec mise à jour instantanée des visualisations pour plusieurs utilisateurs simultanés sans dégrader les performances.</p>
+              </div>
+              <div class="process-card solution">
+                <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="process-title">La solution</h3>
+                <p class="process-text">Architecture microservices avec WebSockets pour les mises à jour en temps réel. Les calculs lourds sont délégués à des workers côté serveur, les résultats sont streamés vers le client via des événements SSE.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Stack -->
+          <section class="reveal">
+            <div class="section-label">Technologies</div>
+            <h2 class="section-title">Stack utilisée</h2>
+            <div class="stack-tags">
+              <span class="stack-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span class="stack-tag"><i class="fas fa-chart-area"></i> D3.js</span>
+              <span class="stack-tag"><i class="fas fa-server"></i> Express</span>
+              <span class="stack-tag"><i class="fas fa-bolt"></i> WebSockets</span>
+              <span class="stack-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+              <span class="stack-tag"><i class="fab fa-docker"></i> Docker</span>
+            </div>
+          </section>
+        </div>
+
+        <!-- LINKS -->
+        <div class="project-links-section reveal">
+          <div class="links-content">
+            <div class="links-text">
+              <h3>Voir le projet en action</h3>
+              <p>Démo live disponible et code source ouvert sur GitHub.</p>
+            </div>
+            <div class="links-actions">
+              <a href="https://demo.datacalc.com" target="_blank" rel="noopener" class="btn primary">
+                <i class="fas fa-external-link-alt"></i> Démo live
+              </a>
+              <a href="https://github.com/jeyko/datacalc" target="_blank" rel="noopener" class="btn ghost">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="project-nav reveal" aria-label="Navigation entre projets">
+          <a href="healthyfood.html" class="project-nav-link prev">
+            <div class="nav-link-icon"><i class="fas fa-arrow-left"></i></div>
+            <div>
+              <div class="nav-link-label">Projet précédent</div>
+              <div class="nav-link-title">HealthyFood</div>
+            </div>
+          </a>
+          <a href="mindful.html" class="project-nav-link next">
+            <div>
+              <div class="nav-link-label">Projet suivant</div>
+              <div class="nav-link-title">Mode & Motion</div>
+            </div>
+            <div class="nav-link-icon"><i class="fas fa-arrow-right"></i></div>
+          </a>
+        </nav>
+      </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/hover.js"></script>
+    <script src="../js/effects.js"></script>
+    <script>document.documentElement.classList.remove("no-js");</script>
+  </body>
+</html>
