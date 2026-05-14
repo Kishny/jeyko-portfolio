@@ -18,6 +18,7 @@ const CSS_FILES = [
   "css/pages/projects.css",
   "css/pages/contact.css",
   "css/pages/project-detail.css",
+  "css/pages/tarifs.css",
 ];
 
 const JS_FILES = [
@@ -32,6 +33,7 @@ const JS_FILES = [
   "js/home.js",
   "js/components/world-map.js",
   "js/components/world-map-advanced.js",
+  "js/tarifs.js",
 ];
 
 const HTML_FILES = [
@@ -52,10 +54,11 @@ const HTML_FILES = [
   "projects/global-explorer.html",
   "projects/boxing-club.html",
   "projects/aura.html",
+  "tarifs.html",
 ];
 
 const STATIC_FILES = ["manifest.json", "robots.txt", "sitemap.xml"];
-const STATIC_DIRS  = ["assets", "data"];
+const STATIC_DIRS = ["assets", "data"];
 
 async function build() {
   // 1. Nettoyer et recréer dist/
@@ -112,8 +115,12 @@ async function build() {
   // 7. Rapport de taille
   const sizes = await getSizes();
   console.log("\nBuild complete → dist/");
-  console.log(`  CSS  : ${sizes.srcCss} KB → ${sizes.distCss} KB  (${sizes.cssSaving}% saved)`);
-  console.log(`  JS   : ${sizes.srcJs} KB → ${sizes.distJs} KB  (${sizes.jsSaving}% saved)`);
+  console.log(
+    `  CSS  : ${sizes.srcCss} KB → ${sizes.distCss} KB  (${sizes.cssSaving}% saved)`,
+  );
+  console.log(
+    `  JS   : ${sizes.srcJs} KB → ${sizes.distJs} KB  (${sizes.jsSaving}% saved)`,
+  );
 }
 
 async function getSizes() {
@@ -121,20 +128,24 @@ async function getSizes() {
     Math.round(
       files
         .filter((f) => fs.existsSync(f))
-        .reduce((acc, f) => acc + fs.statSync(f).size, 0) / 1024
+        .reduce((acc, f) => acc + fs.statSync(f).size, 0) / 1024,
     );
 
   const distCssFiles = CSS_FILES.map((f) => path.join(DIST, f));
-  const distJsFiles  = JS_FILES.map((f) => path.join(DIST, f));
+  const distJsFiles = JS_FILES.map((f) => path.join(DIST, f));
 
-  const srcCss  = kb(CSS_FILES);
+  const srcCss = kb(CSS_FILES);
   const distCss = kb(distCssFiles);
-  const srcJs   = kb(JS_FILES);
-  const distJs  = kb(distJsFiles);
+  const srcJs = kb(JS_FILES);
+  const distJs = kb(distJsFiles);
 
   return {
-    srcCss,  distCss,  cssSaving: Math.round((1 - distCss / srcCss) * 100),
-    srcJs,   distJs,   jsSaving:  Math.round((1 - distJs / srcJs)  * 100),
+    srcCss,
+    distCss,
+    cssSaving: Math.round((1 - distCss / srcCss) * 100),
+    srcJs,
+    distJs,
+    jsSaving: Math.round((1 - distJs / srcJs) * 100),
   };
 }
 

@@ -197,7 +197,7 @@
 
 .projects-preview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: 3rem;
   margin-top: 6rem;
   max-width: 1200px;
@@ -457,6 +457,35 @@
   line-height: 1.6;
 }
 
+.btn.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  color: var(--bg-primary);
+
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(142, 122, 181, 0.35);
+}
+
 .cta .btn.primary.large {
   padding: 1.25rem 3rem;
   font-size: 1.125rem;
@@ -545,7 +574,11 @@
 }
 
 .center {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 6rem;
 }
 

@@ -6,9 +6,22 @@
   --logo-size-scrolled: 56px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
   background: radial-gradient(circle at top, #141726, #0b0d12 60%);
-  color: var(--text-main);
   color: rgba(255, 255, 255, 0.92);
 }
 

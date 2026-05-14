@@ -1,4 +1,18 @@
-/* Home Page Styles - Premium Version */
+/* =========================================================
+   home.css — Home Page Styles - Premium Version
+   Projet : Jeyko.dev Portfolio
+
+   Objectif :
+   - Conserver le rendu desktop premium d'origine
+   - Corriger le chevauchement mobile entre :
+     "Découvrir" et le bouton "Me contacter"
+   - Garder le logo orbital, les glows, les animations et les boutons
+   ========================================================= */
+
+/* =========================================================
+   1. HERO GLOBAL
+   ========================================================= */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -9,11 +23,13 @@
   isolation: isolate;
 }
 
+/* Fond radial premium */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 20% 30%,
       rgba(142, 122, 181, 0.15) 0%,
       transparent 40%
@@ -31,15 +47,13 @@
   z-index: -2;
 }
 
+/* Grille de fond */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 70%);
@@ -47,11 +61,31 @@
   pointer-events: none;
 }
 
+/* =========================================================
+     2. HERO INNER / STRUCTURE
+     ========================================================= */
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 6rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .hero-content {
   max-width: 780px;
   z-index: 2;
   position: relative;
 }
+
+/* =========================================================
+     3. BADGE CENTRAL DU HEADER / HERO
+     Attention : ces classes peuvent aussi être utilisées par le header.
+     ========================================================= */
 
 .hero-badge-wrapper {
   position: absolute;
@@ -62,9 +96,6 @@
   justify-content: center;
   pointer-events: none;
   z-index: 10;
-}
-
-.hero-badge-wrapper {
   animation: badge-float 6s ease-in-out infinite;
 }
 
@@ -73,6 +104,7 @@
   100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-4px);
   }
@@ -88,7 +120,8 @@
   padding: 0.45rem 1.2rem;
   border-radius: 999px;
 
-  background: linear-gradient(
+  background:
+    linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.06),
       rgba(255, 255, 255, 0.02)
@@ -98,11 +131,13 @@
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  box-shadow: 0 0 30px rgba(142, 122, 181, 0.35),
+  box-shadow:
+    0 0 30px rgba(142, 122, 181, 0.35),
     inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .site-header.scrolled .hero-badge-wrapper {
@@ -130,6 +165,7 @@
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -155,10 +191,15 @@
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
 }
+
+/* =========================================================
+     4. TITRE HERO
+     ========================================================= */
 
 .hero-title {
   font-size: clamp(3rem, 5vw, 4.5rem);
@@ -202,10 +243,15 @@
   100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
 }
+
+/* =========================================================
+     5. DESCRIPTION HERO
+     ========================================================= */
 
 .hero-description {
   margin-top: 1.5rem;
@@ -232,17 +278,24 @@
   );
 }
 
+/* =========================================================
+     6. ACTIONS / BOUTONS HERO
+     ========================================================= */
+
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
+  position: relative;
+  z-index: 12;
 }
 
 .hero-actions .btn {
   height: 52px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .btn.primary {
@@ -261,30 +314,37 @@
 
   position: relative;
   overflow: hidden;
-}
-
-.btn.primary {
-  position: relative;
   z-index: 2;
 }
 
 .btn.primary.pulse {
   position: relative;
-  animation: pulse-glow 2.4s ease-in-out infinite;
+  animation: pulse-btn-glow 2.4s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
+@keyframes pulse-btn-glow {
   0% {
-    box-shadow: 0 0 0 rgba(142, 122, 181, 0), 0 0 0 rgba(0, 224, 255, 0);
+    box-shadow:
+      0 0 0 rgba(142, 122, 181, 0),
+      0 0 0 rgba(0, 224, 255, 0);
   }
+
   50% {
-    box-shadow: 0 0 35px rgba(142, 122, 181, 0.6),
+    box-shadow:
+      0 0 35px rgba(142, 122, 181, 0.6),
       0 0 60px rgba(0, 224, 255, 0.3);
   }
+
   100% {
-    box-shadow: 0 0 0 rgba(142, 122, 181, 0), 0 0 0 rgba(0, 224, 255, 0);
+    box-shadow:
+      0 0 0 rgba(142, 122, 181, 0),
+      0 0 0 rgba(0, 224, 255, 0);
   }
 }
+
+/* =========================================================
+     7. BOUTON GLOW BORDER
+     ========================================================= */
 
 .glow-border {
   position: relative;
@@ -297,7 +357,7 @@
   pointer-events: none;
 }
 
-/* le contour animé */
+/* Contour animé */
 .glow-border::before {
   content: "";
   position: absolute;
@@ -316,83 +376,7 @@
   filter: blur(1px);
 }
 
-.btn.primary.glow-border {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.35s ease, background 0.35s ease;
-}
-
-/* Hover principal */
-.btn.primary.glow-border:hover {
-  transform: scale(1.07);
-  background: linear-gradient(135deg, var(--secondary), #7cf3ff, var(--accent));
-  box-shadow: 0 0 35px rgba(124, 243, 255, 0.6),
-    0 0 80px rgba(142, 122, 181, 0.5);
-
-  animation-play-state: paused; /* stop la respiration */
-}
-
-/* Le texte devient plus lumineux */
-.btn.primary.glow-border:hover .btn-text {
-  color: white;
-  text-shadow: 0 0 12px rgba(124, 243, 255, 0.8);
-}
-
-/* La flèche s’anime */
-.btn.primary.glow-border:hover .btn-arrow {
-  transform: translateX(6px);
-  transition: transform 0.35s ease;
-}
-
-.btn.primary.glow-border:hover::before {
-  filter: blur(0.5px);
-}
-
-.btn.primary.glow-border:hover::after {
-  opacity: 1;
-  filter: blur(28px);
-}
-
-.btn.primary.glow-border {
-  animation: glow-breathe 4s ease-in-out infinite;
-}
-
-@keyframes glow-breathe {
-  0% {
-    transform: scale(1);
-    filter: brightness(1);
-  }
-  50% {
-    transform: scale(1.025);
-    filter: brightness(1.1);
-  }
-  100% {
-    transform: scale(1);
-    filter: brightness(1);
-  }
-}
-
-.btn.primary.glow-border::after {
-  animation: glow-border-flow 3s linear infinite,
-    glow-pulse 2.2s ease-in-out infinite,
-    glow-breathe-halo 4s ease-in-out infinite;
-}
-
-@keyframes glow-breathe-halo {
-  0% {
-    opacity: 0.6;
-    filter: blur(18px);
-  }
-  50% {
-    opacity: 1;
-    filter: blur(26px);
-  }
-  100% {
-    opacity: 0.6;
-    filter: blur(18px);
-  }
-}
-
-/* halo externe */
+/* Halo externe */
 .glow-border::after {
   content: "";
   position: absolute;
@@ -409,30 +393,109 @@
   z-index: -2;
   filter: blur(18px);
   opacity: 0.7;
-  animation: glow-border-flow 3s linear infinite,
-    glow-pulse 2.2s ease-in-out infinite;
+  animation:
+    glow-border-flow 3s linear infinite,
+    glow-pulse 2.2s ease-in-out infinite,
+    glow-breathe-halo 4s ease-in-out infinite;
 }
 
-/* animation du dégradé */
+.btn.primary.glow-border {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+  animation: glow-breathe 4s ease-in-out infinite;
+}
+
+/* Hover principal */
+.btn.primary.glow-border:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, var(--secondary), #7cf3ff, var(--accent));
+  box-shadow:
+    0 0 35px rgba(124, 243, 255, 0.6),
+    0 0 80px rgba(142, 122, 181, 0.5);
+  animation-play-state: paused;
+}
+
+/* Texte plus lumineux au hover */
+.btn.primary.glow-border:hover .btn-text {
+  color: white;
+  text-shadow: 0 0 12px rgba(124, 243, 255, 0.8);
+}
+
+/* Flèche animée */
+.btn.primary.glow-border:hover .btn-arrow {
+  transform: translateX(6px);
+  transition: transform 0.35s ease;
+}
+
+.btn.primary.glow-border:hover::before {
+  filter: blur(0.5px);
+}
+
+.btn.primary.glow-border:hover::after {
+  opacity: 1;
+  filter: blur(28px);
+}
+
 @keyframes glow-border-flow {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 300% 50%;
   }
 }
 
-/* respiration */
 @keyframes glow-pulse {
   0%,
   100% {
     opacity: 0.6;
   }
+
   50% {
     opacity: 1;
   }
 }
+
+@keyframes glow-breathe {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+    filter: brightness(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes glow-breathe-halo {
+  0% {
+    opacity: 0.6;
+    filter: blur(18px);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(26px);
+  }
+
+  100% {
+    opacity: 0.6;
+    filter: blur(18px);
+  }
+}
+
+/* =========================================================
+     8. GLOW HERO GLOBAL
+     ========================================================= */
 
 .hero-glow {
   position: absolute;
@@ -449,30 +512,26 @@
   right: -200px;
   transform: translateY(-50%);
   filter: blur(120px);
-  animation: pulse-glow 8s ease-in-out infinite;
+  animation: pulse-hero-glow 8s ease-in-out infinite;
+  pointer-events: none;
 }
 
-@keyframes pulse-glow {
+@keyframes pulse-hero-glow {
   0%,
   100% {
     opacity: 0.25;
     transform: translateY(-50%) scale(1);
   }
+
   50% {
     opacity: 0.35;
     transform: translateY(-50%) scale(1.1);
   }
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
-  gap: 6rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-}
+/* =========================================================
+     9. VISUEL LOGO ORBITAL
+     ========================================================= */
 
 .hero-visual {
   display: flex;
@@ -493,7 +552,9 @@
   opacity: 0.95;
   filter: drop-shadow(0 0 60px rgba(142, 122, 181, 0.4))
     drop-shadow(0 0 120px rgba(0, 224, 255, 0.2));
-  animation: float 8s ease-in-out infinite, rotate-slow 20s linear infinite;
+  animation:
+    float 8s ease-in-out infinite,
+    rotate-slow 20s linear infinite;
 }
 
 .logo-orbits {
@@ -508,6 +569,7 @@
   border: 1px solid rgba(142, 122, 181, 0.2);
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .orbit-1 {
@@ -528,39 +590,6 @@
   animation: orbit-rotate 25s linear infinite;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-15px) rotate(1deg);
-  }
-  66% {
-    transform: translateY(5px) rotate(-1deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-}
-
-@keyframes rotate-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes orbit-rotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
 .logo-glow-large {
   position: absolute;
   inset: -50%;
@@ -572,20 +601,70 @@
   opacity: 0.15;
   filter: blur(80px);
   z-index: -1;
+  pointer-events: none;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* =========================================================
+     10. SCROLL INDICATOR / DÉCOUVRIR
+     Desktop :
+     - reste en absolute en bas du hero
+     Mobile :
+     - repasse dans le flux naturel pour ne pas chevaucher les boutons
+     ========================================================= */
 
 .scroll-indicator {
   position: absolute;
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
+
   opacity: 0.7;
   transition: opacity 0.3s ease;
   z-index: 10;
+  pointer-events: none;
 }
 
 .scroll-indicator:hover {
@@ -599,80 +678,28 @@
   animation: scroll-line 2s ease infinite;
 }
 
-@keyframes scroll-line {
-  0%,
-  100% {
-    height: 60px;
-    opacity: 0.5;
-  }
-  50% {
-    height: 80px;
-    opacity: 1;
-  }
-}
-
 .scroll-text {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   color: var(--text-muted);
 }
 
-@media (max-width: 1100px) {
-  .hero-inner {
-    gap: 4rem;
+@keyframes scroll-line {
+  0%,
+  100% {
+    height: 60px;
+    opacity: 0.5;
   }
 
-  .logo-container {
-    width: min(400px, 50vw);
-    height: min(400px, 50vw);
+  50% {
+    height: 80px;
+    opacity: 1;
   }
 }
 
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 4rem;
-  }
-
-  .hero-visual {
-    margin-top: 2rem;
-    order: -1;
-  }
-
-  .logo-container {
-    width: min(300px, 70vw);
-    height: min(300px, 70vw);
-  }
-
-  .hero-description::before {
-    display: none;
-  }
-
-  .hero-actions {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .scroll-indicator {
-    bottom: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 0 4vw;
-  }
-
-  .hero-title {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* =========================================================
+     11. REVEAL ANIMATIONS
+     ========================================================= */
 
 .reveal {
   opacity: 0;
@@ -699,15 +726,22 @@
 .reveal-stagger.visible > *:nth-child(1) {
   transition-delay: 0.1s;
 }
+
 .reveal-stagger.visible > *:nth-child(2) {
   transition-delay: 0.2s;
 }
+
 .reveal-stagger.visible > *:nth-child(3) {
   transition-delay: 0.3s;
 }
+
 .reveal-stagger.visible > *:nth-child(4) {
   transition-delay: 0.4s;
 }
+
+/* =========================================================
+     12. SECTIONS GÉNÉRALES
+     ========================================================= */
 
 .section {
   padding: 10rem 6vw;
@@ -719,7 +753,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 10% 20%,
       rgba(142, 122, 181, 0.05) 0%,
       transparent 50%
@@ -781,7 +816,10 @@
   margin: 0 auto;
 }
 
-/* Glitch effect for premium touch */
+/* =========================================================
+     13. GLITCH EFFECT
+     ========================================================= */
+
 .glitch-text {
   position: relative;
   display: inline-block;
@@ -816,18 +854,23 @@
   0% {
     transform: translate(0);
   }
+
   20% {
     transform: translate(-2px, 2px);
   }
+
   40% {
     transform: translate(-2px, -2px);
   }
+
   60% {
     transform: translate(2px, 2px);
   }
+
   80% {
     transform: translate(2px, -2px);
   }
+
   100% {
     transform: translate(0);
   }
@@ -837,19 +880,652 @@
   0% {
     transform: translate(0);
   }
+
   20% {
     transform: translate(2px, -2px);
   }
+
   40% {
     transform: translate(2px, 2px);
   }
+
   60% {
     transform: translate(-2px, -2px);
   }
+
   80% {
     transform: translate(-2px, 2px);
   }
+
   100% {
     transform: translate(0);
   }
 }
+
+/* =========================================================
+     14. RESPONSIVE DESKTOP/TABLETTE
+     ========================================================= */
+
+@media (max-width: 1100px) {
+  .hero-inner {
+    gap: 4rem;
+  }
+
+  .logo-container {
+    width: min(400px, 50vw);
+    height: min(400px, 50vw);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 5rem 4vw 4rem;
+    align-items: flex-start;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .hero-visual {
+    margin-top: 2rem;
+    order: -1;
+  }
+
+  .logo-container {
+    width: min(300px, 70vw);
+    height: min(300px, 70vw);
+  }
+
+  .hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .hero-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+
+  .hero-description::before {
+    display: none;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .scroll-indicator {
+    bottom: 2rem;
+  }
+}
+
+/* =========================================================
+     17. ACCESSIBILITÉ — RÉDUCTION DES ANIMATIONS
+     ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo,
+  .orbit,
+  .hero-badge-wrapper,
+  .badge-trail,
+  .hero-badge::before,
+  .btn.primary.glow-border,
+  .btn.primary.glow-border::before,
+  .btn.primary.glow-border::after,
+  .scroll-line,
+  .reveal,
+  .reveal-stagger > * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   HOME MOBILE FULL COMPACT — VERSION FINALE
+   Objectif :
+   - Réduire toute la page d'accueil sur mobile
+   - Hero plus court
+   - Sections plus compactes
+   - Cards moins hautes
+   - CTA final plus léger
+   - Masquer "Découvrir" sur mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+  /* =========================================================
+       HERO MOBILE COMPACT
+       ========================================================= */
+
+  .hero {
+    min-height: auto;
+    padding: 0.9rem 4vw 2rem;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 0.95rem;
+    text-align: center;
+  }
+
+  .hero-visual {
+    order: -1;
+    margin-top: 0;
+  }
+
+  .logo-container {
+    width: min(175px, 48vw);
+    height: min(175px, 48vw);
+  }
+
+  .hero-logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .orbit-1 {
+    width: 104%;
+    height: 104%;
+  }
+
+  .orbit-2 {
+    width: 116%;
+    height: 116%;
+  }
+
+  .orbit-3 {
+    width: 128%;
+    height: 128%;
+  }
+
+  .logo-glow-large {
+    opacity: 0.1;
+    filter: blur(55px);
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 8.6vw, 2.45rem);
+    line-height: 1.04;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.035em;
+  }
+
+  .hero-title .highlight {
+    padding-bottom: 0.16rem;
+  }
+
+  .hero-description {
+    margin-top: 0.75rem;
+    max-width: 100%;
+    padding-left: 0;
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  .hero-description::before {
+    display: none;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1.1rem;
+  }
+
+  .hero-actions .btn,
+  .hero-actions a {
+    width: min(100%, 260px);
+    min-height: 43px;
+    height: 43px;
+    padding: 0.68rem 1rem;
+    font-size: 0.84rem;
+    justify-content: center;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .hero-glow {
+    width: 320px;
+    height: 320px;
+    right: -170px;
+    opacity: 0.16;
+    filter: blur(90px);
+  }
+
+  /* =========================================================
+       SECTIONS GÉNÉRALES COMPACTES
+       ========================================================= */
+
+  .section {
+    padding: 3.2rem 4vw;
+  }
+
+  .section-header {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
+
+  .section-label {
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .label-line {
+    width: 38px;
+  }
+
+  .section-title {
+    font-size: clamp(1.65rem, 8vw, 2.25rem);
+    line-height: 1.05;
+    margin-bottom: 0.85rem;
+  }
+
+  .section-subtitle {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* =========================================================
+       EXPERTISE / FEATURE CARDS
+       ========================================================= */
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 1.1rem;
+    border-radius: 20px;
+  }
+
+  .feature-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .feature-content h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .feature-content p {
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  /* =========================================================
+       PROJETS PREVIEW MOBILE
+       ========================================================= */
+
+  .projects-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card,
+  .project-preview-card {
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .project-card-content,
+  .project-preview-content {
+    padding: 1rem;
+  }
+
+  .project-card h3,
+  .project-preview-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.15;
+  }
+
+  .project-card p,
+  .project-preview-card p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .center {
+    margin-top: 1.5rem;
+  }
+
+  .center .btn,
+  .center a {
+    width: min(100%, 280px);
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+
+  /* =========================================================
+       CTA FINAL MOBILE
+       ========================================================= */
+
+  .cta {
+    padding: 3.2rem 4vw;
+    min-height: auto;
+  }
+
+  .cta-content {
+    padding: 1.4rem 1rem;
+    border-radius: 24px;
+  }
+
+  .cta-label {
+    margin-bottom: 0.8rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(1.8rem, 8vw, 2.45rem);
+    line-height: 1.05;
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-content p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin-bottom: 1.3rem;
+  }
+
+  .cta .btn,
+  .cta-content .btn {
+    width: min(100%, 280px);
+    min-height: 46px;
+    padding: 0.75rem 1rem;
+    font-size: 0.86rem;
+  }
+
+  .cta-shapes .shape {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
+}
+
+/* =========================================================
+     TRÈS PETITS MOBILES — encore plus compact
+     ========================================================= */
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 0.7rem 4vw 1.7rem;
+  }
+
+  .hero-inner {
+    gap: 0.8rem;
+  }
+
+  .logo-container {
+    width: min(155px, 45vw);
+    height: min(155px, 45vw);
+  }
+
+  .hero-title {
+    font-size: clamp(1.62rem, 8.2vw, 2.15rem);
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    font-size: 0.82rem;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    margin-top: 0.95rem;
+  }
+
+  .hero-actions .btn,
+  .hero-actions a {
+    width: min(100%, 245px);
+    min-height: 41px;
+    height: 41px;
+    font-size: 0.82rem;
+  }
+
+  .section {
+    padding: 2.6rem 4vw;
+  }
+
+  .section-header {
+    margin-bottom: 1.6rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 7.4vw, 2rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.84rem;
+  }
+
+  .feature-card {
+    padding: 0.95rem;
+  }
+
+  .feature-content h3 {
+    font-size: 0.98rem;
+  }
+
+  .feature-content p {
+    font-size: 0.82rem;
+  }
+
+  .cta {
+    padding: 2.6rem 4vw;
+  }
+
+  .cta-content {
+    padding: 1.2rem 0.9rem;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(1.55rem, 7.6vw, 2.1rem);
+  }
+
+  .cta-content p {
+    font-size: 0.84rem;
+  }
+}
+
+
+  /* =========================================================
+   FIX ULTIME HOME MOBILE — ANTI OVERFLOW
+   À placer TOUT EN BAS de home.css
+
+   Corrige :
+   - .hero trop large à cause des décors absolus
+   - .particles-container qui dépasse de quelques pixels
+   - .hero-glow qui augmente le scrollWidth
+   - orbites/logo en largeur mobile
+   ========================================================= */
+
+@media (max-width: 768px) {
+  main,
+  .hero,
+  .section,
+  .cta {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero {
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
+    contain: paint !important;
+  }
+
+  .hero-inner,
+  .hero-content,
+  .hero-visual,
+  .features-grid,
+  .projects-preview,
+  .cta-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .hero-inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .hero-visual {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /*
+    Le logo peut rester visible, mais ses décors ne doivent plus agrandir le scrollWidth.
+  */
+  .logo-container {
+    width: min(145px, 42vw) !important;
+    height: min(145px, 42vw) !important;
+    max-width: min(145px, 42vw) !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .hero-logo {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .logo-orbits {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+  }
+
+  .orbit-1 {
+    width: 90% !important;
+    height: 90% !important;
+  }
+
+  .orbit-2 {
+    width: 98% !important;
+    height: 98% !important;
+  }
+
+  .orbit-3 {
+    width: 104% !important;
+    height: 104% !important;
+  }
+
+  /*
+    Ce sont souvent ces éléments décoratifs qui font gonfler .hero.
+    Sur mobile, on les supprime : gain immédiat.
+  */
+  .hero-glow,
+  .hero-grid,
+  .logo-glow-large {
+    display: none !important;
+  }
+
+  /*
+    Les particules sont décoratives : sur mobile elles créent encore 8px de débordement.
+  */
+  .particles-container,
+  .particle {
+    display: none !important;
+  }
+
+  /*
+    CTA décoratif.
+  */
+  .cta,
+  .cta-background,
+  .cta-shapes {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .cta-shapes,
+  .cta-shapes .shape {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo-container {
+    width: min(135px, 40vw) !important;
+    height: min(135px, 40vw) !important;
+    max-width: min(135px, 40vw) !important;
+  }
+
+  .orbit-1 {
+    width: 88% !important;
+    height: 88% !important;
+  }
+
+  .orbit-2 {
+    width: 96% !important;
+    height: 96% !important;
+  }
+
+  .orbit-3 {
+    width: 102% !important;
+    height: 102% !important;
+  }
+}
+
+/* =========================================================
+   FIX FINAL HOME WIDTH MOBILE
+   À placer TOUT EN BAS de home.css
+   ========================================================= */
+
+   @media (max-width: 768px) {
+    main,
+    .hero,
+    .hero-inner,
+    .hero-content,
+    .hero-visual {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      overflow-x: hidden !important;
+      box-sizing: border-box !important;
+    }
+  
+    .hero {
+      padding-left: 4vw !important;
+      padding-right: 4vw !important;
+      contain: layout paint !important;
+    }
+  
+    .hero::before,
+    .hero::after {
+      max-width: 100% !important;
+      overflow: hidden !important;
+    }
+  }

@@ -1,32 +1,72 @@
-// effects.js - Effets premium interactifs
+// =========================================================
+// effects.js — Effets premium interactifs
+// Projet : Jeyko.dev Portfolio
+//
+// Rôle :
+// - Particules décoratives
+// - Curseur personnalisé desktop
+// - Écran de chargement
+// - Formes morphing du CTA
+// - Smooth scroll interne
+// - Révélation avancée
+// - Parallaxe légère
+// - Animation subtile du header
+//
+// Corrections importantes :
+// - Suppression définitive du transform sur body
+// - Désactivation des effets lourds sur mobile
+// - Particules limitées sur mobile
+// - Aucun effet ne doit créer de scroll horizontal
+// =========================================================
 
 class PremiumEffects {
   constructor() {
+    this.isMobile = window.innerWidth <= 768;
+    this.isTouchDevice =
+      window.matchMedia("(hover: none)").matches ||
+      window.matchMedia("(pointer: coarse)").matches;
+
+    this.prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     this.initParticles();
     this.initCustomCursor();
     this.initLoadingScreen();
     this.initMorphingShapes();
   }
 
+  // =========================================================
   // 1. Système de particules
+  // =========================================================
+
   initParticles() {
     const container = document.querySelector(".particles-container");
     if (!container) return;
 
-    const particleCount = window.innerWidth < 768 ? 15 : 30;
+    // On nettoie au cas où le script serait relancé.
+    container.innerHTML = "";
+
+    // Sur mobile, les particules peuvent créer des débordements.
+    // On les réduit fortement, voire on peut les désactiver si besoin.
+    const particleCount = this.isMobile ? 6 : 30;
 
     for (let i = 0; i < particleCount; i++) {
       const particle = document.createElement("div");
       particle.className = "particle";
 
-      // Position aléatoire
-      const size = Math.random() * 100 + 50;
+      const size = this.isMobile
+        ? Math.random() * 40 + 20
+        : Math.random() * 100 + 50;
+
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
-      particle.style.left = `${Math.random() * 100}vw`;
-      particle.style.top = `${Math.random() * 100}vh`;
 
-      // Animation delay
+      // Important :
+      // On évite 100vw exact + grosse taille, car ça peut dépasser du viewport.
+      particle.style.left = `${Math.random() * 90}vw`;
+      particle.style.top = `${Math.random() * 90}vh`;
+
       particle.style.animationDelay = `${Math.random() * 20}s`;
       particle.style.animationDuration = `${Math.random() * 20 + 20}s`;
 
@@ -34,8 +74,17 @@ class PremiumEffects {
     }
   }
 
+  // =========================================================
   // 2. Curseur personnalisé
+  // =========================================================
+
   initCustomCursor() {
+    // Pas de curseur custom sur mobile / tablette tactile.
+    if (this.isMobile || this.isTouchDevice || this.prefersReducedMotion) {
+      document.body.classList.remove("cursor-hover");
+      return;
+    }
+
     const cursorDot = document.querySelector(".cursor-dot");
     const cursorOutline = document.querySelector(".cursor-outline");
 
@@ -43,10 +92,13 @@ class PremiumEffects {
 
     let mouseX = 0;
     let mouseY = 0;
+
     let dotX = 0;
     let dotY = 0;
+
     let outlineX = 0;
     let outlineY = 0;
+
     let scale = 1;
 
     document.addEventListener("mousemove", (e) => {
@@ -54,29 +106,27 @@ class PremiumEffects {
       mouseY = e.clientY;
     });
 
-    // Elements avec effet hover
     const hoverElements = document.querySelectorAll('[data-cursor="hover"]');
+
     hoverElements.forEach((el) => {
       el.addEventListener("mouseenter", () => {
         document.body.classList.add("cursor-hover");
         scale = 1.5;
       });
+
       el.addEventListener("mouseleave", () => {
         document.body.classList.remove("cursor-hover");
         scale = 1;
       });
     });
 
-    // Animation loop
     const animateCursor = () => {
-      // Interpolation pour effet fluide
       dotX += (mouseX - dotX) * 0.15;
       dotY += (mouseY - dotY) * 0.15;
 
       outlineX += (mouseX - outlineX) * 0.1;
       outlineY += (mouseY - outlineY) * 0.1;
 
-      // Appliquer les transformations
       cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
       cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px) scale(${scale})`;
 
@@ -86,31 +136,40 @@ class PremiumEffects {
     animateCursor();
   }
 
+  // =========================================================
   // 3. Écran de chargement
+  // =========================================================
+
   initLoadingScreen() {
     const loadingScreen = document.querySelector(".loading-screen");
+    if (!loadingScreen) return;
 
     window.addEventListener("load", () => {
       setTimeout(() => {
         loadingScreen.classList.add("loaded");
 
-        // Supprimer l'écran de chargement après l'animation
         setTimeout(() => {
           loadingScreen.style.display = "none";
         }, 600);
-      }, 1000);
+      }, 700);
     });
   }
 
+  // =========================================================
   // 4. Formes morphing pour le CTA
+  // =========================================================
+
   initMorphingShapes() {
     const ctaSection = document.querySelector(".cta");
-    if (!ctaSection) return;
-
     const shapesContainer = document.querySelector(".cta-shapes");
-    if (!shapesContainer) return;
 
-    const shapeCount = 3;
+    if (!ctaSection || !shapesContainer) return;
+
+    // On nettoie pour éviter les doublons.
+    shapesContainer.innerHTML = "";
+
+    const shapeCount = this.isMobile ? 2 : 3;
+
     const colors = [
       "rgba(142, 122, 181, 0.1)",
       "rgba(0, 224, 255, 0.1)",
@@ -121,51 +180,71 @@ class PremiumEffects {
       const shape = document.createElement("div");
       shape.className = `shape shape-${i + 1} morphing-shape`;
 
-      // Style aléatoire
-      shape.style.width = `${Math.random() * 200 + 100}px`;
-      shape.style.height = `${Math.random() * 200 + 100}px`;
+      const size = this.isMobile
+        ? Math.random() * 90 + 70
+        : Math.random() * 200 + 100;
+
+      shape.style.width = `${size}px`;
+      shape.style.height = `${size}px`;
       shape.style.background = colors[i];
-      shape.style.left = `${Math.random() * 80 + 10}%`;
-      shape.style.top = `${Math.random() * 80 + 10}%`;
+
+      // On limite la position pour éviter les débordements horizontaux.
+      shape.style.left = `${Math.random() * 65 + 10}%`;
+      shape.style.top = `${Math.random() * 70 + 10}%`;
+
       shape.style.animationDelay = `${i * 2}s`;
 
       shapesContainer.appendChild(shape);
     }
   }
 
-  // 5. Effet de défilement fluide
+  // =========================================================
+  // 5. Smooth scroll interne
+  // =========================================================
+
   initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+
+        if (!href || href === "#") return;
+
+        const target = document.querySelector(href);
+
+        if (!target) return;
+
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       });
     });
   }
 
-  // 6. Effet de révélation avancé
+  // =========================================================
+  // 6. Révélation avancée
+  // =========================================================
+
   initAdvancedReveal() {
     const revealElements = document.querySelectorAll(".reveal-text");
+
+    if (!revealElements.length) return;
 
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+          if (!entry.isIntersecting) return;
 
-            // Effet de délai pour les enfants
-            const children = entry.target.querySelectorAll(".reveal-child");
-            children.forEach((child, index) => {
-              child.style.transitionDelay = `${index * 0.1}s`;
-              child.classList.add("visible");
-            });
-          }
+          entry.target.classList.add("visible");
+
+          const children = entry.target.querySelectorAll(".reveal-child");
+
+          children.forEach((child, index) => {
+            child.style.transitionDelay = `${index * 0.1}s`;
+            child.classList.add("visible");
+          });
         });
       },
       {
@@ -178,53 +257,86 @@ class PremiumEffects {
   }
 }
 
-// Initialiser les effets quand le DOM est chargé
+// =========================================================
+// Initialisation principale
+// =========================================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const effects = new PremiumEffects();
+
   effects.initSmoothScroll();
   effects.initAdvancedReveal();
+
+  initParallaxEffect();
 });
 
-// Effet de parallaxe léger
-document.addEventListener("mousemove", (e) => {
-  const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-  const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+// =========================================================
+// 7. Parallaxe légère
+// Important :
+// - Pas de parallaxe sur mobile
+// - Aucun transform sur body
+// =========================================================
 
-  document.querySelectorAll(".parallax-layer").forEach((layer, index) => {
-    const depth = (index + 1) * 0.5;
-    layer.style.transform = `translate(${moveX * depth}px, ${moveY * depth}px)`;
+function initParallaxEffect() {
+  const isMobile =
+    window.innerWidth <= 768 ||
+    window.matchMedia("(hover: none)").matches ||
+    window.matchMedia("(pointer: coarse)").matches;
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (isMobile || prefersReducedMotion) return;
+
+  document.addEventListener("mousemove", (e) => {
+    const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+    const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+
+    document.querySelectorAll(".parallax-layer").forEach((layer, index) => {
+      const depth = (index + 1) * 0.5;
+
+      layer.style.transform = `translate(${moveX * depth}px, ${
+        moveY * depth
+      }px)`;
+    });
   });
-});
+}
 
-// Effet de vibration au scroll
-let lastScroll = 0;
-const scrollVibration = () => {
-  const currentScroll = window.pageYOffset;
-  const scrollDiff = currentScroll - lastScroll;
+// =========================================================
+// 8. Ancien effet de vibration au scroll — supprimé
+// =========================================================
+//
+// Ancien code problématique :
+//
+// document.body.style.transform = `translateX(...)`;
+//
+// Ce code créait un débordement horizontal sur mobile.
+// Le body ne doit JAMAIS recevoir de transform pour un effet décoratif.
+// =========================================================
 
-  if (Math.abs(scrollDiff) > 5) {
-    document.body.style.transform = `translateX(${
-      Math.sin(currentScroll * 0.01) * 2
-    }px)`;
-  }
 
-  lastScroll = currentScroll;
-  requestAnimationFrame(scrollVibration);
-};
+// =========================================================
+// 9. Effet de dégradé animé sur le header
+// =========================================================
 
-scrollVibration();
-
-// Effet de dégradé animé sur le header
-const animateHeaderGradient = () => {
+function animateHeaderGradient() {
   const header = document.querySelector(".site-header");
+
   if (!header) return;
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) return;
+
   let hue = 0;
+
   setInterval(() => {
     hue = (hue + 1) % 360;
     header.style.borderBottomColor = `hsl(${hue}, 70%, 50%)`;
-  }, 100);
-};
+  }, 140);
+}
 
-// Initialiser après le chargement
 window.addEventListener("load", animateHeaderGradient);

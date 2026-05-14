@@ -491,3 +491,76 @@ document.addEventListener("DOMContentLoaded", () => {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = ProjectsManager;
 }
+
+// =========================================================
+// Accordéon mobile pour les cards projets
+// - Ajoute automatiquement un bouton de dépliage à chaque carte
+// - Sur mobile, une seule carte peut rester ouverte à la fois
+// =========================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const setupProjectAccordions = () => {
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach((card, index) => {
+      // Évite de créer plusieurs fois le bouton si le script se relance
+      if (card.querySelector(".project-accordion-trigger")) return;
+
+      const titleElement = card.querySelector(".project-title");
+      const mediaElement = card.querySelector(".project-media");
+
+      if (!titleElement || !mediaElement) return;
+
+      const title = titleElement.textContent.trim() || "Voir le projet";
+
+      const trigger = document.createElement("button");
+      trigger.className = "project-accordion-trigger";
+      trigger.type = "button";
+      trigger.setAttribute("aria-expanded", "false");
+
+      trigger.innerHTML = `
+        <span class="project-accordion-title">${title}</span>
+        <span class="project-accordion-icon">+</span>
+      `;
+
+      // On place le bouton juste après l'image
+      mediaElement.insertAdjacentElement("afterend", trigger);
+
+      // Option : première carte ouverte par défaut sur mobile
+      if (index === 0 && window.innerWidth <= 768) {
+        card.classList.add("open");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+
+      trigger.addEventListener("click", () => {
+        const isOpen = card.classList.contains("open");
+
+        // Ferme les autres cards sur mobile pour garder une page compacte
+        if (window.innerWidth <= 768) {
+          projectCards.forEach((otherCard) => {
+            if (otherCard !== card) {
+              otherCard.classList.remove("open");
+
+              const otherTrigger = otherCard.querySelector(
+                ".project-accordion-trigger"
+              );
+
+              if (otherTrigger) {
+                otherTrigger.setAttribute("aria-expanded", "false");
+              }
+            }
+          });
+        }
+
+        card.classList.toggle("open", !isOpen);
+        trigger.setAttribute("aria-expanded", String(!isOpen));
+      });
+    });
+  };
+
+  setupProjectAccordions();
+
+  // Si tes projets sont injectés dynamiquement après chargement,
+  // on relance une fois après un court délai.
+  setTimeout(setupProjectAccordions, 500);
+});
