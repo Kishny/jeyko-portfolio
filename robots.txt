@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /dist/
+
+# Politique de confidentialité — crawlable mais noindex (meta tag)
+Allow: /privacy.html
 
 Sitemap: https://jeyko.dev/sitemap.xml
