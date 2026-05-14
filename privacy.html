@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Politique de confidentialité — Jeyko.dev
+    </title>
+    <meta
+      name="description"
+      content="Politique de confidentialité de Jeyko.dev. Découvrez comment vos données personnelles sont collectées, utilisées et protégées."
+    />
+    <meta name="theme-color" content="#0b0d12" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Politique de confidentialité — Jeyko.dev" />
+    <meta
+      property="og:description"
+      content="Politique de confidentialité de Jeyko.dev. Comment vos données personnelles sont traitées."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jeyko.dev/privacy.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/og-image.jpg" />
+    <meta name="author" content="Jean Volcy" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://jeyko.dev/privacy.html" />
+
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icons/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icons/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/icons/android-chrome-512x512.png"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/effects.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* =====================================================
+         PRIVACY PAGE — styles autonomes
+         ===================================================== */
+
+      .privacy-hero {
+        padding: calc(var(--header-height) + 4rem) 0 3rem;
+        text-align: center;
+      }
+
+      .privacy-hero .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(142, 122, 181, 0.3);
+        background: rgba(142, 122, 181, 0.08);
+        color: var(--accent-light);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+
+      .privacy-hero h1 {
+        font-family: var(--font-secondary);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        color: var(--text-main);
+        margin-bottom: 1rem;
+      }
+
+      .privacy-hero .updated {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      .privacy-content {
+        padding: 0 0 6rem;
+      }
+
+      .privacy-content .container {
+        max-width: 780px;
+      }
+
+      .privacy-section {
+        margin-bottom: 3rem;
+        padding: 2rem 2.2rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border-soft);
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+      }
+
+      .privacy-section-header {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .privacy-section-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(142, 122, 181, 0.2), rgba(0, 224, 255, 0.1));
+        border: 1px solid rgba(142, 122, 181, 0.25);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        color: var(--accent-light);
+        font-size: 0.9rem;
+      }
+
+      .privacy-section h2 {
+        font-family: var(--font-secondary);
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin: 0;
+      }
+
+      .privacy-section p,
+      .privacy-section li {
+        font-size: 0.92rem;
+        line-height: 1.75;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .privacy-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .privacy-section ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .privacy-section ul li {
+        margin-bottom: 0.35rem;
+        position: relative;
+      }
+
+      .privacy-section ul li::marker {
+        color: var(--accent);
+      }
+
+      .privacy-section strong {
+        color: var(--text-main);
+        font-weight: 600;
+      }
+
+      .privacy-section a {
+        color: var(--secondary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .privacy-section a:hover {
+        color: var(--accent-light);
+      }
+
+      .privacy-back {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .privacy-hero {
+          padding: calc(var(--header-height) + 2.5rem) 0 2rem;
+        }
+
+        .privacy-section {
+          padding: 1.4rem 1.2rem;
+          border-radius: 16px;
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="privacy-page">
+    <!-- Loading screen -->
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+
+    <!-- Cursor effects -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Particles background -->
+    <div class="particles-container"></div>
+
+    <!-- HEADER -->
+    <header class="site-header scrolled">
+      <div class="header-inner">
+        <a href="index.html" class="logo" data-cursor="hover">
+          <div class="logo-wrapper">
+            <img
+              src="assets/images/jeyko-logo1.png"
+              alt="Jeyko.dev"
+              class="logo-image"
+            />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+
+        <!-- BADGE CENTRÉ -->
+        <div class="hero-badge-wrapper">
+          <div class="badge-trail"></div>
+          <div class="hero-badge">PORTFOLIO</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+          <div class="nav-indicator"></div>
+          <a href="index.html" class="nav-link"
+            ><span class="nav-text">Accueil</span><span class="nav-dot"></span
+          ></a>
+          <a href="projects.html" class="nav-link"
+            ><span class="nav-text">Projets</span><span class="nav-dot"></span
+          ></a>
+          <a href="about.html" class="nav-link"
+            ><span class="nav-text">À propos</span><span class="nav-dot"></span
+          ></a>
+          <a href="tarifs.html" class="nav-link" data-cursor="hover">
+            <span class="nav-text">Tarifs</span>
+            <span class="nav-dot"></span>
+          </a>
+          <a href="contact.html" class="nav-link cta"
+            ><span class="nav-text">Contact</span
+            ><span class="cta-sparkle">✧</span></a
+          >
+        </nav>
+
+        <button class="nav-toggle">
+          <span class="burger-line top"></span>
+          <span class="burger-line bottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="privacy-hero">
+        <div class="container">
+          <span class="hero-label">
+            <i class="fas fa-shield-alt"></i>
+            Légal
+          </span>
+          <h1>Politique de confidentialité</h1>
+          <p class="updated">Dernière mise à jour : 14 mai 2026</p>
+        </div>
+      </section>
+
+      <!-- CONTENU -->
+      <section class="privacy-content">
+        <div class="container">
+
+          <!-- 1. Responsable -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <h2>Responsable du traitement</h2>
+            </div>
+            <p>
+              Le responsable du traitement des données personnelles collectées sur ce site est :
+            </p>
+            <p>
+              <strong>Jean Volcy</strong> — Développeur Web indépendant<br />
+              Site web : <a href="https://jeyko.dev">jeyko.dev</a><br />
+              Email : <a href="mailto:contact.jeyko.dev@gmail.com">contact.jeyko.dev@gmail.com</a>
+            </p>
+          </div>
+
+          <!-- 2. Données collectées -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h2>Données collectées</h2>
+            </div>
+            <p>
+              Ce site collecte uniquement les données que vous saisissez volontairement dans le formulaire de contact :
+            </p>
+            <ul>
+              <li><strong>Nom et prénom</strong> — pour personnaliser la réponse</li>
+              <li><strong>Adresse e-mail</strong> — pour vous répondre</li>
+              <li><strong>Type de projet</strong> — pour adapter la réponse à votre besoin</li>
+              <li><strong>Budget indicatif</strong> — pour évaluer la faisabilité</li>
+              <li><strong>Message</strong> — pour comprendre votre demande</li>
+            </ul>
+            <p>
+              Aucune donnée n'est collectée automatiquement (pas de cookies de tracking, pas d'outil d'analyse comportementale).
+            </p>
+          </div>
+
+          <!-- 3. Utilisation -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h2>Utilisation des données</h2>
+            </div>
+            <p>
+              Les données collectées via le formulaire de contact sont utilisées <strong>exclusivement</strong> pour :
+            </p>
+            <ul>
+              <li>Répondre à votre demande de contact ou de devis</li>
+              <li>Évaluer la faisabilité de votre projet</li>
+              <li>Établir un éventuel devis personnalisé</li>
+            </ul>
+            <p>
+              Vos données ne sont <strong>jamais</strong> vendues, louées, partagées à des fins commerciales,
+              ni transmises à des tiers non essentiels au traitement de votre demande.
+            </p>
+            <p>
+              La transmission des messages est assurée par le service <strong>EmailJS</strong>
+              (<a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener">politique de confidentialité EmailJS</a>),
+              qui agit en tant que sous-traitant.
+            </p>
+          </div>
+
+          <!-- 4. Conservation -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h2>Durée de conservation</h2>
+            </div>
+            <p>
+              Les données sont conservées le temps nécessaire au traitement de votre demande,
+              soit en général <strong>12 mois maximum</strong> après le dernier échange.
+            </p>
+            <p>
+              À l'issue de cette période, les données sont supprimées de manière sécurisée.
+            </p>
+          </div>
+
+          <!-- 5. Droits RGPD -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h2>Vos droits (RGPD)</h2>
+            </div>
+            <p>
+              Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679),
+              vous disposez des droits suivants concernant vos données personnelles :
+            </p>
+            <ul>
+              <li><strong>Droit d'accès</strong> — obtenir une copie de vos données</li>
+              <li><strong>Droit de rectification</strong> — corriger des données inexactes</li>
+              <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+              <li><strong>Droit à la limitation</strong> — limiter le traitement de vos données</li>
+              <li><strong>Droit d'opposition</strong> — vous opposer au traitement</li>
+              <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré</li>
+            </ul>
+            <p>
+              Pour exercer ces droits, contactez-moi par e-mail à
+              <a href="mailto:contact.jeyko.dev@gmail.com">contact.jeyko.dev@gmail.com</a>.
+              Je m'engage à répondre dans un délai d'un mois.
+            </p>
+            <p>
+              Vous avez également le droit d'introduire une réclamation auprès de la
+              <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>
+              si vous estimez que vos droits ne sont pas respectés.
+            </p>
+          </div>
+
+          <!-- 6. Hébergement -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h2>Hébergement du site</h2>
+            </div>
+            <p>
+              Ce site est hébergé par <strong>Vercel Inc.</strong><br />
+              340 Pine Street, Suite 701 — San Francisco, CA 94104, États-Unis
+            </p>
+            <p>
+              Vercel peut collecter des données techniques de navigation (adresse IP, logs d'accès)
+              à des fins de sécurité et de performance, conformément à leur
+              <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">politique de confidentialité</a>.
+            </p>
+          </div>
+
+          <!-- 7. Cookies -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-cookie-bite"></i>
+              </div>
+              <h2>Cookies</h2>
+            </div>
+            <p>
+              Ce site n'utilise <strong>aucun cookie de tracking ou de publicité</strong>.
+            </p>
+            <p>
+              Aucun outil d'analyse comportementale (Google Analytics, Hotjar, etc.) n'est intégré.
+              Votre navigation sur ce site n'est pas suivie à des fins commerciales.
+            </p>
+          </div>
+
+          <!-- 8. Modifications -->
+          <div class="privacy-section reveal">
+            <div class="privacy-section-header">
+              <div class="privacy-section-icon">
+                <i class="fas fa-edit"></i>
+              </div>
+              <h2>Modifications de cette politique</h2>
+            </div>
+            <p>
+              Cette politique de confidentialité peut être mise à jour à tout moment.
+              La date de dernière modification est indiquée en haut de cette page.
+            </p>
+            <p>
+              En continuant à utiliser ce site après une modification, vous acceptez la politique mise à jour.
+            </p>
+          </div>
+
+          <!-- Retour -->
+          <div class="privacy-back">
+            <a href="contact.html" class="btn ghost" data-cursor="hover">
+              <i class="fas fa-arrow-left"></i>
+              <span>Retour au formulaire de contact</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/hover.js" defer></script>
+    <script src="js/effects.js" defer></script>
+  </body>
+</html>
