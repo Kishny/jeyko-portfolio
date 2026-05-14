@@ -28,6 +28,7 @@ const JS_FILES = [
   "js/hover.js",
   "js/effects.js",
   "js/about.js",
+  "js/about-accordion.js",
   "js/projects.js",
   "js/contact.js",
   "js/home.js",
@@ -55,6 +56,7 @@ const HTML_FILES = [
   "projects/boxing-club.html",
   "projects/aura.html",
   "tarifs.html",
+  "privacy.html",
 ];
 
 const STATIC_FILES = ["manifest.json", "robots.txt", "sitemap.xml"];
