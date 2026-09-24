@@ -20,3 +20,6 @@ node_modules/
 # Build output
 dist/
 .vercel
+
+# Captures PNG d'origine (lourdes, non déployées)
+design/captures-originales/

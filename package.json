@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node build.js",
+    "sync": "node scripts/sync-projects.js",
+    "build": "node scripts/sync-projects.js && node build.js",
     "dev": "npx serve ."
   },
   "devDependencies": {
