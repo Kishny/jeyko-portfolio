@@ -34,27 +34,15 @@ const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 pages.forEach((p, i) => {
   const prev = pages[(i - 1 + pages.length) % pages.length];
   const next = pages[(i + 1) % pages.length];
-  const nav = `<nav class="project-nav reveal" aria-label="Navigation entre projets">
-          <a href="${path.basename(prev.link)}" class="project-nav-link prev">
-            <div class="nav-link-icon"><i class="fas fa-arrow-left"></i></div>
-            <div>
-              <div class="nav-link-label">Projet précédent</div>
-              <div class="nav-link-title">${esc(prev.title)}</div>
-            </div>
-          </a>
-          <a href="${path.basename(next.link)}" class="project-nav-link next">
-            <div>
-              <div class="nav-link-label">Projet suivant</div>
-              <div class="nav-link-title">${esc(next.title)}</div>
-            </div>
-            <div class="nav-link-icon"><i class="fas fa-arrow-right"></i></div>
-          </a>
+  const nav = `<nav class="pd-nav" aria-label="Navigation entre projets">
+          <a class="prev" href="${path.basename(prev.link)}"><small>← Projet précédent</small><strong>${esc(prev.title)}</strong></a>
+          <a class="next" href="${path.basename(next.link)}"><small>Projet suivant →</small><strong>${esc(next.title)}</strong></a>
         </nav>`;
   const file = path.join(ROOT, p.link);
   const html = fs.readFileSync(file, "utf8");
-  const re = /<nav class="project-nav[^"]*"[^>]*>[\s\S]*?<\/nav>/;
+  const re = /<nav class="(?:project-nav|pd-nav)[^"]*"[^>]*>[\s\S]*?<\/nav>/;
   if (!re.test(html)) {
-    console.warn(`⚠ Pas de <nav class="project-nav"> dans ${p.link}`);
+    console.warn(`⚠ Pas de <nav class="pd-nav"> dans ${p.link}`);
     return;
   }
   fs.writeFileSync(file, html.replace(re, nav));

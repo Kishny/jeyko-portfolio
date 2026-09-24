@@ -8,7 +8,12 @@ Langue du site et des échanges : **français**.
 
 - Site **statique** : HTML + CSS + JavaScript vanilla, aucun framework.
 - Build : `build.js` (esbuild) minifie CSS/JS et copie HTML + `assets/` + `data/` dans `dist/`.
-- Icônes : Font Awesome 6.4 (CDN cdnjs). Polices : Inter + Space Grotesk (Google Fonts).
+- Design « Piste E » (refonte de septembre 2026) : fond blanc, textes marron, accent rouge, petits
+  dégradés rouge → marron sur les mots en italique. Maquettes : artefact « Portfolio Jeyko.dev — Refonte ».
+- Polices (Google Fonts) : Instrument Serif (titres), Geist (texte), JetBrains Mono (libellés).
+- Icônes : Font Awesome 6.4 (CDN cdnjs), chargé uniquement sur les pages projet.
+- Logo : `assets/images/jeyko-logo-256.webp` (menu, pied de page) et `jeyko-emblem.webp` (accueil, À propos).
+  On ne modifie pas le logo.
 
 ## Commandes
 
@@ -24,10 +29,8 @@ npm run build   # sync + build → dist/
 index.html, projects.html, about.html, tarifs.html, contact.html, privacy.html
 projects/<slug>.html          # une page de détail par projet (écrite à la main)
 data/projects.json            # SOURCE DE VÉRITÉ des projets (cartes, accueil, compteur)
-data/about-data.json
-js/projects.js                # grille, filtres, recherche, « charger plus » (6 par page)
-js/home.js                    # accueil : affiche les 2 projets les plus récents
-css/pages/project-detail.css  # styles des pages de détail
+css/site.css                  # TOUT le style : tokens (couleurs, polices), composants, pages, responsive
+js/site.js                    # menu mobile, apparitions, projets (accueil + Réalisations), formulaire de contact
 assets/images/projects/       # captures des projets, en .webp
 design/captures-originales/   # captures PNG d'origine (non déployées)
 scripts/sync-projects.js      # script de synchronisation
@@ -51,14 +54,15 @@ docs/archive/                 # anciennes pages retirées
    - Pour que le projet apparaisse en tête (et sur l'accueil), le placer en haut du fichier :
      le tri se fait par année décroissante, puis dans l'ordre du fichier.
 3. **Page de détail** : copier une page récente (ex. `projects/planora.html`) vers `projects/<slug>.html`
-   et adapter : `<title>`, meta description / OG / Twitter / canonical, badge, année, titre (`<span class="highlight">`),
-   tags, liens démo, bloc overview, image, « À propos », fonctionnalités (icônes Font Awesome),
-   défi/solution, stack. Laisser le bloc `<nav class="project-nav">` : il est régénéré.
+   et adapter : `<title>`, meta description / OG / Twitter / canonical, badge, année, titre (`<span class="highlight">`
+   pour la partie en italique rouge), tags, boutons démo, bloc `pd-overview`, image, « À propos »,
+   fonctionnalités (`.features`, ajouter `features--2` s'il y en a 4), défi/solution, stack.
+   Laisser le bloc `<nav class="pd-nav">` : il est régénéré.
 4. **`npm run sync`** : met à jour la navigation précédent/suivant, `HTML_FILES` dans `build.js`
    et les URLs projets de `sitemap.xml`.
 5. Vérifier en local (`npm run dev`) : page Projets, filtres, accueil, page de détail.
-6. Mettre à jour le compteur statique « Projets réalisés » dans `about.html` (`data-count`) si besoin
-   (celui de `projects.html` est mis à jour automatiquement par le JS).
+6. Rien d'autre : les compteurs « projets livrés » (`data-project-total`) et l'accueil (3 projets les plus récents)
+   se mettent à jour tout seuls depuis le JSON.
 
 ## Retirer un projet
 
@@ -79,3 +83,8 @@ Certaines anciennes entrées contiennent des infos incohérentes : HealthyFood (
 faux liens démo/GitHub), « Mode & Motion » (pointe vers `mindful.html`, page d'une app bien-être),
 « Country App » (pointe vers `fintech.html`), Data Calculator (faux liens). Les projets sources sont dans
 `~/Projects/healthyfood2`, `~/Projects/country app`, `~/Projects/data calculator`.
+
+## Formulaire de contact
+
+`js/site.js` → objet `EMAILJS` : tant que les 3 clés EmailJS sont vides, l'envoi ouvre la messagerie du
+visiteur (mailto pré-rempli vers contact.jeyko.dev@gmail.com). Renseigner les clés pour un envoi direct.

@@ -5,37 +5,9 @@ const path = require("path");
 
 const DIST = "dist";
 
-const CSS_FILES = [
-  "css/variables.css",
-  "css/base.css",
-  "css/layout.css",
-  "css/components.css",
-  "css/animations.css",
-  "css/effects.css",
-  "css/components/world-map.css",
-  "css/pages/home.css",
-  "css/pages/about.css",
-  "css/pages/projects.css",
-  "css/pages/contact.css",
-  "css/pages/project-detail.css",
-  "css/pages/tarifs.css",
-];
+const CSS_FILES = ["css/site.css"];
 
-const JS_FILES = [
-  "js/main.js",
-  "js/navigation.js",
-  "js/scroll.js",
-  "js/hover.js",
-  "js/effects.js",
-  "js/about.js",
-  "js/about-accordion.js",
-  "js/projects.js",
-  "js/contact.js",
-  "js/home.js",
-  "js/components/world-map.js",
-  "js/components/world-map-advanced.js",
-  "js/tarifs.js",
-];
+const JS_FILES = ["js/site.js"];
 
 const HTML_FILES = [
   "index.html",

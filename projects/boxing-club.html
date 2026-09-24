@@ -1,247 +1,151 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boxing Club Tours — Jeyko.dev</title>
     <meta name="description" content="Site officiel du Boxing Club Tours Métropole : 7 disciplines, 3 salles, galas et inscriptions en ligne. Réalisé par Jeyko.dev." />
-    <meta name="theme-color" content="#0b0d12" />
-    <meta property="og:title" content="Boxing Club Tours — Jeyko.dev" />
-    <meta property="og:description" content="Site officiel du Boxing Club Tours Métropole : 7 disciplines, 3 salles, galas et inscriptions en ligne. Réalisé par Jeyko.dev." />
-    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <link rel="stylesheet" href="../css/effects.css" />
-    <link rel="stylesheet" href="../css/pages/project-detail.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://jeyko.dev/projects/boxing-club.html" />
-    <meta property="og:image" content="https://jeyko.dev/assets/images/projects/boxing-club.webp" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="Jean Volcy" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jeyko.dev/projects/boxing-club.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Jeyko.dev" />
+    <meta property="og:title" content="Boxing Club Tours — Jeyko.dev" />
+    <meta property="og:description" content="Site officiel du Boxing Club Tours Métropole : 7 disciplines, 3 salles, galas et inscriptions en ligne. Réalisé par Jeyko.dev." />
+    <meta property="og:url" content="https://jeyko.dev/projects/boxing-club.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/projects/boxing-club.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Boxing Club Tours — Jeyko.dev" />
     <meta name="twitter:description" content="Site officiel du Boxing Club Tours Métropole : 7 disciplines, 3 salles, galas et inscriptions en ligne. Réalisé par Jeyko.dev." />
     <meta name="twitter:image" content="https://jeyko.dev/assets/images/projects/boxing-club.webp" />
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/site.css" />
   </head>
-<body class="project-detail-page">
-    <div class="loading-screen">
-      <div class="loading-spinner">
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-      </div>
-    </div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <div class="particles-container"></div>
-
-    <header class="site-header scrolled">
-      <div class="header-inner">
-        <a href="../index.html" class="logo" data-cursor="hover">
-          <div class="logo-wrapper">
-            <img src="../assets/images/jeyko-logo1.png" alt="Jeyko.dev" class="logo-image" />
-            <div class="logo-glow"></div>
-          </div>
+  <body data-base="../">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="../index.html" aria-label="Jeyko.dev — accueil">
+          <img src="../assets/images/jeyko-logo-256.webp" alt="" width="48" height="48" />
+          <span>Jeyko<em>.dev</em></span>
         </a>
-        <div class="hero-badge-wrapper">
-          <div class="badge-trail"></div>
-          <div class="hero-badge">PORTFOLIO</div>
-        </div>
-        <nav class="main-nav">
-          <div class="nav-indicator"></div>
-          <a href="../index.html" class="nav-link"><span class="nav-text">Accueil</span><span class="nav-dot"></span></a>
-          <a href="../projects.html" class="nav-link active"><span class="nav-text">Projets</span><span class="nav-dot"></span></a>
-          <a href="../about.html" class="nav-link"><span class="nav-text">À propos</span><span class="nav-dot"></span></a>
-          <a href="../contact.html" class="nav-link cta"><span class="nav-text">Contact</span><span class="cta-sparkle">✧</span></a>
+        <nav class="nav" id="site-nav" aria-label="Navigation principale">
+          <a href="../index.html">Accueil</a>
+          <a href="../projects.html" aria-current="page">Réalisations</a>
+          <a href="../about.html">À propos</a>
+          <a href="../tarifs.html">Tarifs</a>
+          <a href="../contact.html">Contact</a>
         </nav>
-        <button class="nav-toggle">
-          <span class="burger-line top"></span>
-          <span class="burger-line bottom"></span>
+        <a class="btn btn--primary header-cta" href="../contact.html">Démarrer un projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </header>
-
-    <main>
-      <section class="project-detail-hero">
-        <div class="hero-background">
-          <div class="hero-glow"></div>
-          <div class="hero-grid"></div>
-        </div>
-        <div class="container">
-          <a href="../projects.html" class="back-link">
-            <i class="fas fa-arrow-left"></i>
-            Retour aux projets
-          </a>
-          <div class="hero-eyebrow">
-            <span class="project-badge-hero">Sport</span>
-            <span class="project-year-hero">2026</span>
-          </div>
-          <h1 class="hero-title">Boxing Club <span class="highlight">Tours</span></h1>
-          <div class="hero-tags">
-            <span class="hero-tag">Sport</span>
-            <span class="hero-tag">Next.js</span>
-            <span class="hero-tag">TypeScript</span>
-            <span class="hero-tag">MongoDB</span>
-            <span class="hero-tag">Association</span>
-          </div>
-          <div class="hero-actions">
-            <a href="https://www.boxingtoursmetropole.fr/" target="_blank" rel="noopener" class="btn primary">
-              <i class="fas fa-external-link-alt"></i> Voir le site
-            </a>
-          </div>
+    <main id="contenu">
+      <section class="pd-hero">
+        <div class="wrap">
+          <a class="back-link" href="../projects.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg> Toutes les réalisations</a>
+          <div class="pd-eyebrow"><span class="pd-badge">Sport</span><span class="pd-year">2026</span></div>
+          <h1>Boxing Club <span class="highlight">Tours</span></h1>
+          <div class="pd-tags"><span>Sport</span><span>Next.js</span><span>TypeScript</span><span>MongoDB</span><span>Association</span></div>
+          <div class="hero__actions"><a class="btn btn--primary btn--lg" href="https://www.boxingtoursmetropole.fr/" target="_blank" rel="noopener">Voir le site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a><a class="btn btn--ghost btn--lg" href="../contact.html">Un projet similaire ?</a></div>
         </div>
       </section>
 
-      <div class="container">
-        <div class="project-overview reveal">
-          <div class="overview-item">
-            <div class="overview-label">Client</div>
-            <div class="overview-value">Boxing Club Tours Métropole</div>
-          </div>
-          <div class="overview-item">
-            <div class="overview-label">Durée</div>
-            <div class="overview-value">4 mois</div>
-          </div>
-          <div class="overview-item">
-            <div class="overview-label">Année</div>
-            <div class="overview-value">2026</div>
-          </div>
-          <div class="overview-item">
-            <div class="overview-label">Stack</div>
-            <div class="overview-value">Next.js 16, TypeScript, Tailwind CSS, MongoDB</div>
-          </div>
+      <div class="wrap">
+        <dl class="pd-overview reveal"><div><dt>Client</dt><dd>Boxing Club Tours Métropole</dd></div><div><dt>Durée</dt><dd>4 mois</dd></div><div><dt>Année</dt><dd>2026</dd></div><div><dt>Stack</dt><dd>Next.js 16, TypeScript, Tailwind CSS, MongoDB</dd></div></dl>
+        <div class="window pd-showcase reveal">
+          <div class="window__bar"><span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>SPORT · 2026</span><span>boxingtoursmetropole.fr</span></div>
+          <div class="window__img"><img src="../assets/images/projects/boxing-club.webp" alt="Aperçu Boxing Club Tours" /></div>
         </div>
-
-        <div class="project-showcase reveal">
-          <img src="../assets/images/projects/boxing-club.webp" alt="Aperçu Boxing Club Tours" loading="lazy" />
-        </div>
-
-        <div class="project-sections">
-          <section class="reveal">
-            <div class="section-label">À propos du projet</div>
-            <h2 class="section-title">Le ring au bout des doigts</h2>
-            <p class="section-text">
-              Le Boxing Club Tours Métropole rassemble trois salles de la métropole tourangelle (Tours Nord, La Riche, Tours Métropole) et propose sept disciplines : boxe anglaise, kickboxing, Muay Thaï, pancrace, savate, aerokick et cardio step, dès 6 ans.
-            </p>
-            <p class="section-text" style="margin-top:1rem;">
-              Le site Next.js centralise disciplines, coachs, athlètes, historique, horaires, tarifs et galas, avec inscription en ligne et un espace d&#x27;administration pour que le club mette à jour ses contenus lui-même.
-            </p>
+        <div class="pd-sections">
+          <section class="pd-section reveal">
+            <span class="label">[ 01 ] À propos du projet</span>
+            <h2>Le ring au bout des doigts</h2>
+            <p>Le Boxing Club Tours Métropole rassemble trois salles de la métropole tourangelle (Tours Nord, La Riche, Tours Métropole) et propose sept disciplines : boxe anglaise, kickboxing, Muay Thaï, pancrace, savate, aerokick et cardio step, dès 6 ans.</p>
+            <p>Le site Next.js centralise disciplines, coachs, athlètes, historique, horaires, tarifs et galas, avec inscription en ligne et un espace d&#x27;administration pour que le club mette à jour ses contenus lui-même.</p>
           </section>
 
-          <section class="reveal">
-            <div class="section-label">Fonctionnalités</div>
-            <h2 class="section-title">Ce que propose le projet</h2>
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-hand-fist"></i></div>
-                <div class="feature-name">7 disciplines</div>
-                <div class="feature-desc">Fiches détaillées par sport, du loisir à la compétition.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div class="feature-name">3 salles</div>
-                <div class="feature-desc">Horaires et informations pratiques de chaque site.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-trophy"></i></div>
-                <div class="feature-name">Galas &amp; événements</div>
-                <div class="feature-desc">Annonce des galas avec compte à rebours et billetterie.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-id-card"></i></div>
-                <div class="feature-name">Inscription en ligne</div>
-                <div class="feature-desc">Séance d&#x27;essai et inscription directement depuis le site.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-users"></i></div>
-                <div class="feature-name">Coachs &amp; athlètes</div>
-                <div class="feature-desc">Présentation de l&#x27;équipe et des combattants du club.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-user-gear"></i></div>
-                <div class="feature-name">Espace admin</div>
-                <div class="feature-desc">Gestion des contenus par le club.</div>
-              </div>
+          <section class="pd-section">
+            <span class="label">[ 02 ] Fonctionnalités</span>
+            <h2>Ce que propose le <em class="grad">projet</em></h2>
+            <div class="features">
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-hand-fist" aria-hidden="true"></i></span><h3>7 disciplines</h3><p>Fiches détaillées par sport, du loisir à la compétition.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span><h3>3 salles</h3><p>Horaires et informations pratiques de chaque site.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-trophy" aria-hidden="true"></i></span><h3>Galas &amp; événements</h3><p>Annonce des galas avec compte à rebours et billetterie.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-id-card" aria-hidden="true"></i></span><h3>Inscription en ligne</h3><p>Séance d&#x27;essai et inscription directement depuis le site.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-users" aria-hidden="true"></i></span><h3>Coachs &amp; athlètes</h3><p>Présentation de l&#x27;équipe et des combattants du club.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-user-gear" aria-hidden="true"></i></span><h3>Espace admin</h3><p>Gestion des contenus par le club.</p></div>
             </div>
           </section>
 
-          <section class="reveal">
-            <div class="section-label">Défi & Solution</div>
-            <h2 class="section-title">Résoudre les vrais problèmes</h2>
-            <div class="process-grid">
-              <div class="process-card challenge">
-                <div class="process-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                <h3 class="process-title">Le défi</h3>
-                <p class="process-text">Représenter l&#x27;énergie d&#x27;un club de sports de combat tout en restant accessible aux débutants, aux familles et aux compétiteurs, sur trois salles différentes.</p>
-              </div>
-              <div class="process-card solution">
-                <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
-                <h3 class="process-title">La solution</h3>
-                <p class="process-text">Site Next.js au design punchy avec pages dédiées (disciplines, coachs, athlètes, horaires, tarifs, galas), inscription en ligne et back-office pour que le club gère ses contenus.</p>
-              </div>
+          <section class="pd-section">
+            <span class="label">[ 03 ] Défi &amp; solution</span>
+            <h2>Résoudre les <em class="grad">vrais problèmes</em></h2>
+            <div class="duo">
+              <article class="card reveal" style="--accent: var(--sienna)"><span class="card__num">LE DÉFI</span><h3>Le point de départ</h3><p>Représenter l&#x27;énergie d&#x27;un club de sports de combat tout en restant accessible aux débutants, aux familles et aux compétiteurs, sur trois salles différentes.</p></article>
+              <article class="card reveal" style="--accent: var(--red)"><span class="card__num">LA SOLUTION</span><h3>Ce que j’ai construit</h3><p>Site Next.js au design punchy avec pages dédiées (disciplines, coachs, athlètes, horaires, tarifs, galas), inscription en ligne et back-office pour que le club gère ses contenus.</p></article>
             </div>
           </section>
 
-          <section class="reveal">
-            <div class="section-label">Technologies</div>
-            <h2 class="section-title">Stack utilisée</h2>
-            <div class="stack-tags">
-              <span class="stack-tag"><i class="fab fa-react"></i> Next.js 16</span>
-              <span class="stack-tag"><i class="fas fa-code"></i> TypeScript</span>
-              <span class="stack-tag"><i class="fas fa-wind"></i> Tailwind CSS</span>
-              <span class="stack-tag"><i class="fas fa-database"></i> MongoDB</span>
-              <span class="stack-tag"><i class="fas fa-cloud"></i> Cloudinary</span>
-              <span class="stack-tag"><i class="fas fa-film"></i> Framer Motion</span>
-            </div>
+          <section class="pd-section reveal">
+            <span class="label">[ 04 ] Technologies</span>
+            <h2>Stack <em class="grad">utilisée</em></h2>
+            <div class="chips" style="font-size: 13px"><span class="chip"><i class="fab fa-react" aria-hidden="true"></i> Next.js 16</span><span class="chip"><i class="fas fa-code" aria-hidden="true"></i> TypeScript</span><span class="chip"><i class="fas fa-wind" aria-hidden="true"></i> Tailwind CSS</span><span class="chip"><i class="fas fa-database" aria-hidden="true"></i> MongoDB</span><span class="chip"><i class="fas fa-cloud" aria-hidden="true"></i> Cloudinary</span><span class="chip"><i class="fas fa-film" aria-hidden="true"></i> Framer Motion</span></div>
           </section>
         </div>
 
-        <div class="project-links-section reveal">
-          <div class="links-content">
-            <div class="links-text">
-              <h3>Voir le projet en action</h3>
-              <p>Site officiel en ligne du club.</p>
-            </div>
-            <div class="links-actions">
-              <a href="https://www.boxingtoursmetropole.fr/" target="_blank" rel="noopener" class="btn primary">
-                <i class="fas fa-external-link-alt"></i> Voir le site
-              </a>
-            </div>
-          </div>
+        <div class="pd-links reveal">
+          <div><h2>Voir le projet en action</h2><p>Site officiel en ligne du club.</p></div>
+          <a class="btn btn--primary btn--lg" href="https://www.boxingtoursmetropole.fr/" target="_blank" rel="noopener">Voir le site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
         </div>
 
-        <nav class="project-nav reveal" aria-label="Navigation entre projets">
-          <a href="vwa-kiltirel.html" class="project-nav-link prev">
-            <div class="nav-link-icon"><i class="fas fa-arrow-left"></i></div>
-            <div>
-              <div class="nav-link-label">Projet précédent</div>
-              <div class="nav-link-title">Vwa Kiltirèl</div>
-            </div>
-          </a>
-          <a href="wara-secretariat.html" class="project-nav-link next">
-            <div>
-              <div class="nav-link-label">Projet suivant</div>
-              <div class="nav-link-title">Wara Secrétariat</div>
-            </div>
-            <div class="nav-link-icon"><i class="fas fa-arrow-right"></i></div>
-          </a>
+        <nav class="pd-nav" aria-label="Navigation entre projets">
+          <a class="prev" href="vwa-kiltirel.html"><small>← Projet précédent</small><strong>Vwa Kiltirèl</strong></a>
+          <a class="next" href="wara-secretariat.html"><small>Projet suivant →</small><strong>Wara Secrétariat</strong></a>
         </nav>
       </div>
-    </main>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/navigation.js"></script>
-    <script src="../js/scroll.js"></script>
-    <script src="../js/hover.js"></script>
-    <script src="../js/effects.js"></script>
-    <script>document.documentElement.classList.remove("no-js");</script>
+      <section class="cta reveal" aria-labelledby="cta-title">
+        <span class="label">[ Contact ]</span>
+        <h2 id="cta-title">Un projet en tête ?<br /><em class="grad-light">Parlons-en.</em></h2>
+        <div class="cta__row">
+          <p>Consultation gratuite de 30 minutes pour cadrer votre projet. Réponse sous 24 h ouvrées.</p>
+          <a class="btn btn--primary btn--lg" href="../contact.html">Démarrer un projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-brand">
+          <img src="../assets/images/jeyko-logo-256.webp" alt="" width="60" height="60" />
+          <div>
+            <strong>Jeyko<em>.dev</em></strong>
+            <small>TOURS · 47.39°N 0.69°E · DEPUIS 2025</small>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Pages du site">
+          <a href="../index.html">Accueil</a>
+          <a href="../tarifs.html">Tarifs</a>
+          <a href="../projects.html">Réalisations</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../about.html">À propos</a>
+          <a href="../privacy.html">Confidentialité</a>
+        </nav>
+        <p class="footer-copy">© <span data-year>2026</span> Jeyko.dev — Jean Volcy</p>
+      </div>
+    </footer>
+    <script src="../js/site.js" defer></script>
   </body>
 </html>

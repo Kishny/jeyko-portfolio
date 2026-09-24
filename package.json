@@ -5,7 +5,7 @@
   "scripts": {
     "sync": "node scripts/sync-projects.js",
     "build": "node scripts/sync-projects.js && node build.js",
-    "dev": "npx serve ."
+    "dev": "npx serve . -l 987"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"

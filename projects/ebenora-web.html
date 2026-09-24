@@ -1,238 +1,149 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ebenora Beauty — Jeyko.dev</title>
     <meta name="description" content="Ebenora Beauty : e-shop cosmétique pour peaux noires, brunes et ébènes, avec diagnostic de peau et routines. Conçu par Jeyko.dev." />
-    <meta name="theme-color" content="#0b0d12" />
-    <meta property="og:title" content="Ebenora Beauty — Jeyko.dev" />
-    <meta property="og:description" content="Ebenora Beauty : e-shop cosmétique pour peaux noires, brunes et ébènes, avec diagnostic de peau et routines. Conçu par Jeyko.dev." />
-    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <link rel="stylesheet" href="../css/effects.css" />
-    <link rel="stylesheet" href="../css/pages/project-detail.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://jeyko.dev/projects/ebenora-web.html" />
-    <meta property="og:image" content="https://jeyko.dev/assets/images/projects/ebenora-web.webp" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="Jean Volcy" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jeyko.dev/projects/ebenora-web.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Jeyko.dev" />
+    <meta property="og:title" content="Ebenora Beauty — Jeyko.dev" />
+    <meta property="og:description" content="Ebenora Beauty : e-shop cosmétique pour peaux noires, brunes et ébènes, avec diagnostic de peau et routines. Conçu par Jeyko.dev." />
+    <meta property="og:url" content="https://jeyko.dev/projects/ebenora-web.html" />
+    <meta property="og:image" content="https://jeyko.dev/assets/images/projects/ebenora-web.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ebenora Beauty — Jeyko.dev" />
     <meta name="twitter:description" content="Ebenora Beauty : e-shop cosmétique pour peaux noires, brunes et ébènes, avec diagnostic de peau et routines. Conçu par Jeyko.dev." />
     <meta name="twitter:image" content="https://jeyko.dev/assets/images/projects/ebenora-web.webp" />
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/site.css" />
   </head>
-<body class="project-detail-page">
-    <div class="loading-screen">
-      <div class="loading-spinner">
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-      </div>
-    </div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <div class="particles-container"></div>
-
-    <header class="site-header scrolled">
-      <div class="header-inner">
-        <a href="../index.html" class="logo" data-cursor="hover">
-          <div class="logo-wrapper">
-            <img src="../assets/images/jeyko-logo1.png" alt="Jeyko.dev" class="logo-image" />
-            <div class="logo-glow"></div>
-          </div>
+  <body data-base="../">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="../index.html" aria-label="Jeyko.dev — accueil">
+          <img src="../assets/images/jeyko-logo-256.webp" alt="" width="48" height="48" />
+          <span>Jeyko<em>.dev</em></span>
         </a>
-        <div class="hero-badge-wrapper">
-          <div class="badge-trail"></div>
-          <div class="hero-badge">PORTFOLIO</div>
-        </div>
-        <nav class="main-nav">
-          <div class="nav-indicator"></div>
-          <a href="../index.html" class="nav-link"><span class="nav-text">Accueil</span><span class="nav-dot"></span></a>
-          <a href="../projects.html" class="nav-link active"><span class="nav-text">Projets</span><span class="nav-dot"></span></a>
-          <a href="../about.html" class="nav-link"><span class="nav-text">À propos</span><span class="nav-dot"></span></a>
-          <a href="../contact.html" class="nav-link cta"><span class="nav-text">Contact</span><span class="cta-sparkle">✧</span></a>
+        <nav class="nav" id="site-nav" aria-label="Navigation principale">
+          <a href="../index.html">Accueil</a>
+          <a href="../projects.html" aria-current="page">Réalisations</a>
+          <a href="../about.html">À propos</a>
+          <a href="../tarifs.html">Tarifs</a>
+          <a href="../contact.html">Contact</a>
         </nav>
-        <button class="nav-toggle">
-          <span class="burger-line top"></span>
-          <span class="burger-line bottom"></span>
+        <a class="btn btn--primary header-cta" href="../contact.html">Démarrer un projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </header>
-
-    <main>
-      <section class="project-detail-hero">
-        <div class="hero-background">
-          <div class="hero-glow"></div>
-          <div class="hero-grid"></div>
-        </div>
-        <div class="container">
-          <a href="../projects.html" class="back-link">
-            <i class="fas fa-arrow-left"></i>
-            Retour aux projets
-          </a>
-          <div class="hero-eyebrow">
-            <span class="project-badge-hero">E-commerce</span>
-            <span class="project-year-hero">2026</span>
-          </div>
-          <h1 class="hero-title">Ebenora <span class="highlight">Beauty</span></h1>
-          <div class="hero-tags">
-            <span class="hero-tag">E-commerce</span>
-            <span class="hero-tag">Beauté</span>
-            <span class="hero-tag">React</span>
-            <span class="hero-tag">Stripe</span>
-            <span class="hero-tag">Diagnostic</span>
-          </div>
-          <div class="hero-actions">
-            <a href="https://ebenorabeauty.vercel.app/" target="_blank" rel="noopener" class="btn primary">
-              <i class="fas fa-external-link-alt"></i> Voir la démo
-            </a>
-          </div>
+    <main id="contenu">
+      <section class="pd-hero">
+        <div class="wrap">
+          <a class="back-link" href="../projects.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg> Toutes les réalisations</a>
+          <div class="pd-eyebrow"><span class="pd-badge">E-commerce</span><span class="pd-year">2026</span></div>
+          <h1>Ebenora <span class="highlight">Beauty</span></h1>
+          <div class="pd-tags"><span>E-commerce</span><span>Beauté</span><span>React</span><span>Stripe</span><span>Diagnostic</span></div>
+          <div class="hero__actions"><a class="btn btn--primary btn--lg" href="https://ebenorabeauty.vercel.app/" target="_blank" rel="noopener">Voir la démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a><a class="btn btn--ghost btn--lg" href="../contact.html">Un projet similaire ?</a></div>
         </div>
       </section>
 
-      <div class="container">
-        <div class="project-overview reveal">
-          <div class="overview-item">
-            <div class="overview-label">Client</div>
-            <div class="overview-value">Ebenora Beauty</div>
-          </div>
-          <div class="overview-item">
-            <div class="overview-label">Durée</div>
-            <div class="overview-value">2 semaines</div>
-          </div>
-          <div class="overview-item">
-            <div class="overview-label">Année</div>
-            <div class="overview-value">2026</div>
-          </div>
-          <div class="overview-item">
-            <div class="overview-label">Stack</div>
-            <div class="overview-value">React 19, Vite, Express, MongoDB, Stripe</div>
-          </div>
+      <div class="wrap">
+        <dl class="pd-overview reveal"><div><dt>Client</dt><dd>Ebenora Beauty</dd></div><div><dt>Durée</dt><dd>2 semaines</dd></div><div><dt>Année</dt><dd>2026</dd></div><div><dt>Stack</dt><dd>React 19, Vite, Express, MongoDB, Stripe</dd></div></dl>
+        <div class="window pd-showcase reveal">
+          <div class="window__bar"><span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>E-COMMERCE · 2026</span><span>ebenorabeauty.vercel.app</span></div>
+          <div class="window__img"><img src="../assets/images/projects/ebenora-web.webp" alt="Aperçu Ebenora Beauty" /></div>
         </div>
-
-        <div class="project-showcase reveal">
-          <img src="../assets/images/projects/ebenora-web.webp" alt="Aperçu Ebenora Beauty" loading="lazy" />
-        </div>
-
-        <div class="project-sections">
-          <section class="reveal">
-            <div class="section-label">À propos du projet</div>
-            <h2 class="section-title">L&#x27;éclat des peaux ébènes, révélé</h2>
-            <p class="section-text">
-              Ebenora Beauty est une marque de soins pensée pour les femmes noires, brunes et ébènes. Le site réunit la boutique, un diagnostic de peau en une minute, des routines par carnation et un guide éducatif.
-            </p>
-            <p class="section-text" style="margin-top:1rem;">
-              Le front React mobile-first porte une direction artistique chaleureuse et premium ; le backend Express/MongoDB gère le catalogue, les comptes et les paiements Stripe et PayPal.
-            </p>
+        <div class="pd-sections">
+          <section class="pd-section reveal">
+            <span class="label">[ 01 ] À propos du projet</span>
+            <h2>L&#x27;éclat des peaux ébènes, révélé</h2>
+            <p>Ebenora Beauty est une marque de soins pensée pour les femmes noires, brunes et ébènes. Le site réunit la boutique, un diagnostic de peau en une minute, des routines par carnation et un guide éducatif.</p>
+            <p>Le front React mobile-first porte une direction artistique chaleureuse et premium ; le backend Express/MongoDB gère le catalogue, les comptes et les paiements Stripe et PayPal.</p>
           </section>
 
-          <section class="reveal">
-            <div class="section-label">Fonctionnalités</div>
-            <h2 class="section-title">Ce que propose le projet</h2>
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-                <div class="feature-name">Diagnostic de peau</div>
-                <div class="feature-desc">Un parcours rapide qui oriente vers les bons soins.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-spa"></i></div>
-                <div class="feature-name">Routines ciblées</div>
-                <div class="feature-desc">Des routines adaptées à chaque carnation et problématique.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-cart-shopping"></i></div>
-                <div class="feature-name">Boutique &amp; panier</div>
-                <div class="feature-desc">Catalogue produits, fiches détaillées et panier.</div>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
-                <div class="feature-name">Paiement en ligne</div>
-                <div class="feature-desc">Paiement sécurisé par Stripe ou PayPal.</div>
-              </div>
+          <section class="pd-section">
+            <span class="label">[ 02 ] Fonctionnalités</span>
+            <h2>Ce que propose le <em class="grad">projet</em></h2>
+            <div class="features features--2">
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></span><h3>Diagnostic de peau</h3><p>Un parcours rapide qui oriente vers les bons soins.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-spa" aria-hidden="true"></i></span><h3>Routines ciblées</h3><p>Des routines adaptées à chaque carnation et problématique.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-cart-shopping" aria-hidden="true"></i></span><h3>Boutique &amp; panier</h3><p>Catalogue produits, fiches détaillées et panier.</p></div>
+              <div class="feature reveal"><span class="feature__icon"><i class="fas fa-credit-card" aria-hidden="true"></i></span><h3>Paiement en ligne</h3><p>Paiement sécurisé par Stripe ou PayPal.</p></div>
             </div>
           </section>
 
-          <section class="reveal">
-            <div class="section-label">Défi & Solution</div>
-            <h2 class="section-title">Résoudre les vrais problèmes</h2>
-            <div class="process-grid">
-              <div class="process-card challenge">
-                <div class="process-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                <h3 class="process-title">Le défi</h3>
-                <p class="process-text">Créer une marque beauté crédible et inclusive, qui parle directement aux peaux mélaninées, avec un vrai parcours d&#x27;achat.</p>
-              </div>
-              <div class="process-card solution">
-                <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
-                <h3 class="process-title">La solution</h3>
-                <p class="process-text">Site React mobile-first à la direction artistique chaleureuse, diagnostic interactif qui oriente vers les bons produits, et backend Express/MongoDB avec paiements Stripe et PayPal.</p>
-              </div>
+          <section class="pd-section">
+            <span class="label">[ 03 ] Défi &amp; solution</span>
+            <h2>Résoudre les <em class="grad">vrais problèmes</em></h2>
+            <div class="duo">
+              <article class="card reveal" style="--accent: var(--sienna)"><span class="card__num">LE DÉFI</span><h3>Le point de départ</h3><p>Créer une marque beauté crédible et inclusive, qui parle directement aux peaux mélaninées, avec un vrai parcours d&#x27;achat.</p></article>
+              <article class="card reveal" style="--accent: var(--red)"><span class="card__num">LA SOLUTION</span><h3>Ce que j’ai construit</h3><p>Site React mobile-first à la direction artistique chaleureuse, diagnostic interactif qui oriente vers les bons produits, et backend Express/MongoDB avec paiements Stripe et PayPal.</p></article>
             </div>
           </section>
 
-          <section class="reveal">
-            <div class="section-label">Technologies</div>
-            <h2 class="section-title">Stack utilisée</h2>
-            <div class="stack-tags">
-              <span class="stack-tag"><i class="fab fa-react"></i> React 19</span>
-              <span class="stack-tag"><i class="fas fa-bolt"></i> Vite</span>
-              <span class="stack-tag"><i class="fas fa-film"></i> Framer Motion</span>
-              <span class="stack-tag"><i class="fab fa-node-js"></i> Express</span>
-              <span class="stack-tag"><i class="fas fa-database"></i> MongoDB</span>
-              <span class="stack-tag"><i class="fab fa-stripe"></i> Stripe</span>
-              <span class="stack-tag"><i class="fab fa-paypal"></i> PayPal</span>
-            </div>
+          <section class="pd-section reveal">
+            <span class="label">[ 04 ] Technologies</span>
+            <h2>Stack <em class="grad">utilisée</em></h2>
+            <div class="chips" style="font-size: 13px"><span class="chip"><i class="fab fa-react" aria-hidden="true"></i> React 19</span><span class="chip"><i class="fas fa-bolt" aria-hidden="true"></i> Vite</span><span class="chip"><i class="fas fa-film" aria-hidden="true"></i> Framer Motion</span><span class="chip"><i class="fab fa-node-js" aria-hidden="true"></i> Express</span><span class="chip"><i class="fas fa-database" aria-hidden="true"></i> MongoDB</span><span class="chip"><i class="fab fa-stripe" aria-hidden="true"></i> Stripe</span><span class="chip"><i class="fab fa-paypal" aria-hidden="true"></i> PayPal</span></div>
           </section>
         </div>
 
-        <div class="project-links-section reveal">
-          <div class="links-content">
-            <div class="links-text">
-              <h3>Voir le projet en action</h3>
-              <p>Site en ligne, hébergé sur Vercel.</p>
-            </div>
-            <div class="links-actions">
-              <a href="https://ebenorabeauty.vercel.app/" target="_blank" rel="noopener" class="btn primary">
-                <i class="fas fa-external-link-alt"></i> Voir la démo
-              </a>
-            </div>
-          </div>
+        <div class="pd-links reveal">
+          <div><h2>Voir le projet en action</h2><p>Site en ligne, hébergé sur Vercel.</p></div>
+          <a class="btn btn--primary btn--lg" href="https://ebenorabeauty.vercel.app/" target="_blank" rel="noopener">Voir la démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
         </div>
 
-        <nav class="project-nav reveal" aria-label="Navigation entre projets">
-          <a href="ebenora-app.html" class="project-nav-link prev">
-            <div class="nav-link-icon"><i class="fas fa-arrow-left"></i></div>
-            <div>
-              <div class="nav-link-label">Projet précédent</div>
-              <div class="nav-link-title">Ebenora Beauty App</div>
-            </div>
-          </a>
-          <a href="sferaluna.html" class="project-nav-link next">
-            <div>
-              <div class="nav-link-label">Projet suivant</div>
-              <div class="nav-link-title">SferaLuna</div>
-            </div>
-            <div class="nav-link-icon"><i class="fas fa-arrow-right"></i></div>
-          </a>
+        <nav class="pd-nav" aria-label="Navigation entre projets">
+          <a class="prev" href="ebenora-app.html"><small>← Projet précédent</small><strong>Ebenora Beauty App</strong></a>
+          <a class="next" href="sferaluna.html"><small>Projet suivant →</small><strong>SferaLuna</strong></a>
         </nav>
       </div>
-    </main>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/navigation.js"></script>
-    <script src="../js/scroll.js"></script>
-    <script src="../js/hover.js"></script>
-    <script src="../js/effects.js"></script>
-    <script>document.documentElement.classList.remove("no-js");</script>
+      <section class="cta reveal" aria-labelledby="cta-title">
+        <span class="label">[ Contact ]</span>
+        <h2 id="cta-title">Un projet en tête ?<br /><em class="grad-light">Parlons-en.</em></h2>
+        <div class="cta__row">
+          <p>Consultation gratuite de 30 minutes pour cadrer votre projet. Réponse sous 24 h ouvrées.</p>
+          <a class="btn btn--primary btn--lg" href="../contact.html">Démarrer un projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-brand">
+          <img src="../assets/images/jeyko-logo-256.webp" alt="" width="60" height="60" />
+          <div>
+            <strong>Jeyko<em>.dev</em></strong>
+            <small>TOURS · 47.39°N 0.69°E · DEPUIS 2025</small>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Pages du site">
+          <a href="../index.html">Accueil</a>
+          <a href="../tarifs.html">Tarifs</a>
+          <a href="../projects.html">Réalisations</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../about.html">À propos</a>
+          <a href="../privacy.html">Confidentialité</a>
+        </nav>
+        <p class="footer-copy">© <span data-year>2026</span> Jeyko.dev — Jean Volcy</p>
+      </div>
+    </footer>
+    <script src="../js/site.js" defer></script>
   </body>
 </html>
