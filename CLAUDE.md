@@ -58,8 +58,9 @@ docs/archive/                 # anciennes pages retirées
    pour la partie en italique rouge), tags, boutons démo, bloc `pd-overview`, image, « À propos »,
    fonctionnalités (`.features`, ajouter `features--2` s'il y en a 4), défi/solution, stack.
    Laisser le bloc `<nav class="pd-nav">` : il est régénéré.
-4. **`npm run sync`** : met à jour la navigation précédent/suivant, `HTML_FILES` dans `build.js`
-   et les URLs projets de `sitemap.xml`.
+4. **`npm run sync`** : met à jour la navigation précédent/suivant, `HTML_FILES` dans `build.js`,
+   les URLs projets de `sitemap.xml` et les cartes projets écrites en dur dans `projects.html` / `index.html`
+   (entre `<!-- projets:debut -->` et `<!-- projets:fin -->`, pour que Google voie les liens sans JavaScript).
 5. Vérifier en local (`npm run dev`) : page Projets, filtres, accueil, page de détail.
 6. Rien d'autre : les compteurs « projets livrés » (`data-project-total`) et l'accueil (3 projets les plus récents)
    se mettent à jour tout seuls depuis le JSON.
@@ -88,3 +89,10 @@ faux liens démo/GitHub), « Mode & Motion » (pointe vers `mindful.html`, page 
 
 `js/site.js` → objet `EMAILJS` : tant que les 3 clés EmailJS sont vides, l'envoi ouvre la messagerie du
 visiteur (mailto pré-rempli vers contact.jeyko.dev@gmail.com). Renseigner les clés pour un envoi direct.
+
+## SEO
+
+- Pages retirées : ajouter une redirection 301 dans `vercel.json` (`redirects`) vers `/projects.html`.
+- `privacy.html` est en `noindex`. L'accueil contient des données structurées JSON-LD (ProfessionalService).
+- Après une mise en ligne importante : Search Console → Sitemaps → renvoyer `sitemap.xml`, et « Demander l'indexation »
+  pour l'accueil, Réalisations, Tarifs et les nouvelles pages projet.

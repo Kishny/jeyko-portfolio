@@ -81,4 +81,29 @@ sitemap = sitemap.replace(
 );
 fs.writeFileSync(sitemapPath, sitemap);
 
+
+// 5. Cartes projets écrites en dur dans le HTML (pour Google et sans JavaScript).
+//    js/site.js les remplace ensuite par la version interactive (filtres, pagination).
+const escAttr = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } };
+const card = (p, i, featured) => {
+  const num = String(i + 1).padStart(2, "0");
+  const chips = String(p.stack || "").split(",").map((x) => x.trim()).filter(Boolean).slice(0, featured ? 5 : 3)
+    .map((x) => `<span class="chip">${escAttr(x)}</span>`).join("");
+  const domain = hostOf(p.demo);
+  return `<a class="project${featured ? " project--featured" : ""}" href="${escAttr(p.link)}"><div class="window"><div class="window__bar"><span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>PRJ-${num} · ${escAttr(String(p.badge || "").toUpperCase())}</span>${domain ? `<span>${escAttr(domain)}</span>` : ""}</div><div class="window__img"><img src="${escAttr(p.image)}" alt="Aperçu du projet ${escAttr(p.title)}" loading="lazy" decoding="async"></div></div><div class="project__head"><h3>${escAttr(p.title)}</h3><span class="project__year">${escAttr(p.year)}</span></div><p class="project__desc">${escAttr(p.description)}</p><div class="project__meta"><div class="chips">${chips}</div><span class="project__client">${escAttr(p.client)} · ${escAttr(p.duration)}</span></div></a>`;
+};
+const cardsHtml = (list) => {
+  const [first, ...rest] = list;
+  return card(first, 0, true) + (rest.length ? `<div class="projects-grid">${rest.map((p, i) => card(p, i + 1)).join("")}</div>` : "");
+};
+[["projects.html", projects], ["index.html", projects.slice(0, 3)]].forEach(([file, list]) => {
+  const f = path.join(ROOT, file);
+  if (!fs.existsSync(f)) return;
+  const html = fs.readFileSync(f, "utf8");
+  const re = /<!-- projets:debut -->[\s\S]*?<!-- projets:fin -->/;
+  if (!re.test(html)) return console.warn(`⚠ Marqueurs <!-- projets:debut/fin --> absents de ${file}`);
+  fs.writeFileSync(f, html.replace(re, `<!-- projets:debut -->${cardsHtml(list)}<!-- projets:fin -->`));
+});
+
 console.log(`✓ ${projects.length} projets, ${pages.length} pages de détail synchronisées`);
